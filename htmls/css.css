@@ -1,0 +1,162 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: rgb(182, 221, 255);
+    color: black;
+
+}
+ul {
+    list-style-type: none;
+}
+  
+li {
+    float: right;
+}
+  
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+li a:hover {
+    color: aqua;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(255, 0, 0);
+}
+
+.overHead{
+      width: 100%;
+      height: 50px;
+      background-color: aquamarine;
+    border-radius: 50px;
+}
+
+.telf{
+    width: 500px;
+    line-height: 50px;
+    margin-left: 15px;
+}
+
+.spamer{
+    margin-top: -65px;
+   /* margin-left: 40%;*/
+    margin-right: 45%;
+}
+
+.ubi{
+    float: right;
+    margin-right: -890px;
+    margin-top: -0px;
+}
+
+.header{
+      width: 100%;
+      height: 80px;
+      background-color: lightcoral;
+      border-radius: 25px;
+}
+
+.loguito img{
+	width: 	150px;
+    height: 80px;
+	max-height: 	200px;
+	max-width: 	100%;
+
+}
+
+.menu{
+	margin-top: -80px;
+}
+
+.galeri{
+    /*background-color: rgb(209, 201, 216);*/
+    margin-top: 5px;
+    height:380px;
+}
+
+.galeri img{
+	width: 	100%;
+	max-height: 	380px;
+	max-width: 640px;
+    margin-left: 33%;
+}
+
+.identifier{
+    background-color: rgb(86, 226, 43);
+    height: 300px;
+    margin-bottom: 120px;
+}
+
+.footer{
+    background-color: rgb(133, 133, 204);
+    border-radius: 10px;
+
+
+}
+
+.subfooter{
+    margin-top: 65px;
+}
+
+.subfooter ul {
+    text-align: center;
+    float: left;
+    margin-left: 26%;
+
+}
+
+.subfooter li  {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+/*Contacto*/
+.contactoGeneral{
+    background-color: orange;
+    height: 500px;
+}
+
+.contactoMap{
+    margin-left: 15%;
+}
+
+/*Nuestro Centro*/
+.galeriNuestroCentro{
+    margin-top: 20px;
+    height:600px;
+
+}
+
+.galeriNuestroCentro img{
+    width: 	100%;
+	max-height: 	600px;
+	max-width: 1066px;
+    margin-left: 19%;
+}
+
+.nueCen{
+    margin-top: -150px;
+    margin-left: 4%;
+}
+
+.nuestroTexto{
+    height: 950px;
+    background-color: white;
+    width: 1066px;
+    margin-left: 19%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
