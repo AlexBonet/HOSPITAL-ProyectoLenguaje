@@ -2,7 +2,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     margin-left: 100px;
     margin-right: 100px;
-    background-color: rgb(182, 221, 255);
+    /*background-color: rgb(182, 221, 255);*/
     color: black;
 
 }
@@ -35,9 +35,9 @@ a:hover {
 }
 
 .overHead{
-      width: 100%;
-      height: 50px;
-      background-color: aquamarine;
+    width: 100%;
+    height: 50px;
+    /*background-color: aquamarine;*/
     border-radius: 50px;
 }
 
