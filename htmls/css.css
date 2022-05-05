@@ -36,7 +36,7 @@ a{
 }
 
 a:hover {
-    color: rgb(206, 182, 255);
+    color: rgb(99, 71, 155);
 }
 
 .overHead{
@@ -156,7 +156,7 @@ a:hover {
 
 /*Contacto*/
 .contactoGeneral{
-    background-color: orange;
+    /*background-color: orange;*/
     height: 400px;
     margin-top: 10px;
     margin-bottom: 10px;
