@@ -1,0 +1,25 @@
+FER ESPECIALIDADES 
+
+Parte Genereal:
+- #Inicio fer la sala/lista de espera
+- #Identicarse te se te que vore bé + poder fer la consula a la db, a parte tenim que saber diferenciar entre dirents contes
+- #Registrar pensar cap a on podem anar desde que li donem a identificarse
+
+Parte Paciente:
+- #MiCuenta q se puga desplegar un cerrar sesion
+- Poder pedir cita
+- En Inicio fer lista de espera
+- #MiCuenta fer per complet
+
+
+FER parte de doctor, admin y recepcion
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+PRIORITI LIST
+
+2º Pedir citas en firebase
+3º Sala/Lista de espera
+4º Fer especialidades
+5º Ajustar #Identicarse y #Registrar

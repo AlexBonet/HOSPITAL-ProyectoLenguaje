@@ -86,6 +86,26 @@ a:hover {
 	margin-top: -85px;
 }
 
+.menu li ul{
+    display: none;
+    position: absolute;
+}
+.menu li:hover > ul{
+    display: block;
+    margin-left: -40px;
+}
+
+.cajaMenu{
+    background-color: rgb(182, 213, 255);
+    border-radius: 25%;
+}
+
+.cajaMenu:hover{
+    background-color: rgb(182, 231, 255);
+    border: 1px solid rgb(99, 71, 155);
+    border-radius: 25%;
+}
+
 .galeri{
     /*background-color: rgb(209, 201, 216);*/
     margin-top: 5px;
@@ -175,12 +195,15 @@ a:hover {
 
 .btn-pedir-cita-menu{
     border: 1px solid rgb(99, 71, 155);
+    background-color: rgb(182, 213, 255);
+    border-radius: 25%;
 
 }
 
-.btn-pedir-cita:hover{
-    background-color: rgb(99, 71, 155);
-    color:rgb(209, 240, 255) ;
+.btn-pedir-cita-menu:hover{
+    background-color: rgb(182, 231, 255);
+    border: 1px solid rgb(99, 71, 155);
+    border-radius: 25%;
 }
 
 .btn-pedir-cita2{
