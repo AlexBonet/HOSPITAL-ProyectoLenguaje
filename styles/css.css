@@ -167,8 +167,33 @@ a:hover {
 }
 
 .contactoMap{
-    margin-left:25%;
+    margin-left:35%;
     margin-bottom: 10px;
+}
+
+/*Botones Pedir cita*/
+
+.btn-pedir-cita-menu{
+    border: 1px solid rgb(99, 71, 155);
+
+}
+
+.btn-pedir-cita2{
+    border: 1px solid rgb(99, 71, 155);
+    float: left;
+    width: 8.5%;
+    margin-left: 78%;
+    margin-top: -5%;
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    
+}
+
+.btn-pedir-cita2:hover{
+    background-color: rgb(99, 71, 155);
+    color:rgb(209, 240, 255) ;
 }
 
 /*Nuestro Centro*/
