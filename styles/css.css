@@ -320,3 +320,21 @@ a:hover {
     margin-left:65%;
     border: 2px solid black;
 }
+
+/*PEDIR CITAS*/
+.pedidor-citas{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    border: 1px solid rgb(68, 87, 96);
+    width: 50%;
+    margin-left: 25%;
+    background-color: rgb(195, 255, 182);
+
+}
+
+.contenedor-pc{
+    width: 100%;
+    margin-left: 35%;
+    margin-bottom: 10px ;
+}
