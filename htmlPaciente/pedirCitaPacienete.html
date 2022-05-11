@@ -57,19 +57,19 @@
             <div class="pedidor-citas">
                 <form action="" id="cita-form">
                     <label for="nombre">Nombre: </label>
-                    <input type="text" placeholder="Inserte su nombre" id="nom-pc">
+                    <input type="text" placeholder="Inserte su nombre" id="nom-pc" maxlength="25">
                     <br><br>
                     <label for="apellidos">Apelldios: </label>
-                    <input type="text" placeholder="Inserte sus apellidos" id="ape-pc">
+                    <input type="text" placeholder="Inserte sus apellidos" id="ape-pc" maxlength="25">
                     <br><br>
                     <label for="dni">DNI: </label>
-                    <input type="text" placeholder="Inserte su DNI" id="dni-pc">
+                    <input type="text" placeholder="Inserte su DNI" id="dni-pc" maxlength="25">
                     <br><br>
                     <label for="fecha-hora">Fecha y hota de la cita:</label>
-                    <input type="datetime" placeholder="Inserte fecha y hora" id="fh-pc">    
+                    <input type="datetime" placeholder="Inserte fecha y hora" id="fh-pc" maxlength="25">
                     <br><br>
                     <label for="descripcion">Describe que le ocurre:</label>
-                    <textarea id="txt-pc" cols="22" rows="2" placeholder="Inserte una descripción"></textarea>    
+                    <input type="text" placeholder="Inserte una  descripción" id="txt-pc" maxlength="25">
                     <br><br>
                     <button id="btn-pc">Pedir Cita</button>
                 </form>
@@ -102,7 +102,8 @@
 
 
     </div>
-    <script type="module" src="../js/index.js"></script>
+    
 </body>
 <script src="https://kit.fontawesome.com/9fbcafb666.js" crossorigin="anonymous"></script>
+<script type="module" src="../js/index.js"></script>    
 </html>

@@ -37,6 +37,7 @@ a{
 
 a:hover {
     color: rgb(99, 71, 155);
+    z-index: 10000;
 }
 
 .overHead{
@@ -123,10 +124,9 @@ a:hover {
 
 .listaEspera{
     background-color: rgb(255, 45, 255);
-    height: 300px;
-    width: 100%;
-    margin-bottom: 120px;
-    margin-left:35%;
+    width: 25%;
+    margin-left:74%;
+    display: inline-block;
 }
 
 .footer{
@@ -137,6 +137,7 @@ a:hover {
     height: 80px;
     border: 2px solid rgb(237, 249, 255);
     color: rgb(209, 240, 255);
+    margin-top: 10px;
 }
 .footer li a{
     color: rgb(209, 240, 255);
@@ -269,45 +270,60 @@ a:hover {
 }
 
 /*IDENTIFICAR*/
-.identifier{
-    background-color: rgb(195, 255, 182);
-    height: 250px;
-    width: 60%;
-    padding-left: 40%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: -300px;
-    margin-bottom: 20px;
-    margin-left:37%;
-    z-index: 3;
-
-}
-
-.botoncin{
-    background-color: rgb(255, 206, 182);
-    border-radius: 25px;
-    width: 185px;
-    height: 100px;
-    text-align: center;
-    line-height: 100px ;
-    z-index: 50;
-}
-
-.identifier a:hover{
-    color: grey;
+.iniciaSes{
+    margin-top: 10px;
+    margin-bottom: 70px;
 }
 
 .galeriLog{
+    position: relative;
     margin-top: 5px;
     margin-left:47%;
-    z-index: 1;
-}
+    }
 
 .galeriLog img{
 	max-height: 760px;
 	max-width: 1280px;
-    
 }
+
+.identifier{
+    position: relative;
+    height: 150px;
+    width: 20%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: -330px;
+    margin-left:76.2%;
+    z-index: 200;
+    color: rgb(111, 58, 197);
+    background-color: rgb(58, 197, 181);
+    border: 1px solid rgb(111, 58, 197);
+
+}
+
+.botoncin{
+    position: relative;
+    background-color: rgb(182, 213, 255);
+    border-radius: 25px;
+    width: 185px;
+    height: 70px;
+    margin-left: 77%;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 70px ;
+    z-index: 100;
+
+}
+
+.botoncin:hover{
+    color: rgb(99, 71, 155);
+    background-color: rgb(182, 213, 255);
+    border: 1px solid rgb(99, 71, 155);
+    font-weight: bold;
+    z-index: 100;
+}
+
 
 /*REGISTRARSE*/
 .register{

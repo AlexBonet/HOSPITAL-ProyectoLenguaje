@@ -21,15 +21,15 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore()
 
 export const saveF = (nom,ape,dni,fh,txt) => 
-    addDoc(collection(db, 'ci'),{nom ,ape ,dni ,fh ,txt})
+    addDoc(collection(db, 'citas'),{nom ,ape ,dni ,fh ,txt})
 
-export const getTasks = () => getDocs(collection(db, 'ci'));
+export const getTasks = () => getDocs(collection(db, 'citas'));
 
-export const onGetTasks = (callback) => onSnapshot(collection(db, 'ci'),callback);
+export const onGetTasks = (callback) => onSnapshot(collection(db, 'citas'),callback);
 
-export const deleteTask = id => deleteDoc(doc(db,'ci', id));
+export const deleteTask = id => deleteDoc(doc(db,'citas', id));
 
-export const getTask = id => getDoc(doc(db,'ci', id));
+export const getTask = id => getDoc(doc(db,'citas', id));
 
-export const updateTasks = (id,newFields) => updateDoc(doc(db,"ci",id), newFields);
+export const updateTasks = (id,newFields) => updateDoc(doc(db,"citas",id), newFields);
 
