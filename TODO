@@ -1,12 +1,12 @@
 FER ESPECIALIDADES 
 
 Parte Genereal:
-- #Inicio fer la sala/lista de espera
+- #Inicio arrehlar colors lista de espera
 - #Identicarse poder fer la consula a la db, a parte tenim que saber diferenciar entre dirents contes
 - #Registrar pensar cap a on podem anar desde que li donem a identificarse
 
 Parte Paciente:
-- En Inicio fer lista de espera
+- #Inicio arrehlar colors lista de espera
 - #MiCuenta fer per complet
 
 
@@ -16,8 +16,3 @@ FER parte de doctor, admin y recepcion
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 PRIORITI LIST
-
-
-3º Sala/Lista de espera
-4º Fer especialidades
-5º Ajustar #Identicarse y #Registrar

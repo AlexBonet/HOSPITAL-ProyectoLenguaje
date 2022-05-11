@@ -33,3 +33,5 @@ export const getTask = id => getDoc(doc(db,'citas', id));
 
 export const updateTasks = (id,newFields) => updateDoc(doc(db,"citas",id), newFields);
 
+export const logPaciente = (nom,ape,dir,pob,pais,mail,tlf,user,pswd,cpaswd) => 
+    addDoc(collection(db, 'pacientes'),{nom,ape,dir,pob,pais,mail,tlf,user,pswd,cpaswd})
