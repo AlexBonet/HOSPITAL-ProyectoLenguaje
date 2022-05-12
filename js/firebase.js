@@ -50,3 +50,15 @@ export const getPaciente = () => getDocs(collection(db, 'pacientes'));
 
 export const deletePacientes = id => deleteDoc(doc(db,'pacientes', id));
 
+
+/*DOCTORES*/
+export const logDoctor = (nom,ape,dir,pob,pais,mail,tlf,user,pswd,cpaswd) => 
+    addDoc(collection(db, 'doctores'),{nom,ape,dir,pob,pais,mail,tlf,user,pswd,cpaswd})
+
+export const updateDoctor = (id,newFields) => updateDoc(doc(db,"doctores",id), newFields);
+
+export const onGetDoctor = (callback) => onSnapshot(collection(db, 'doctores'),callback);
+
+export const getDoctor = () => getDocs(collection(db, 'doctores'));
+
+export const deleteDoctor = id => deleteDoc(doc(db,'doctores', id));
