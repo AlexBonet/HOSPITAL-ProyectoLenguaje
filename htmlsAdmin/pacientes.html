@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     
-    <title>index</title>
+    <title>GESTIONAR PACIENTES</title>
 </head>
 <body>
     <div class="mainConteiner">
@@ -31,16 +31,70 @@
             </div>
         </div>
 
-        <div class="tabla">
-            <a href=""><div class="cajaGestion">Gestionar Doctores</div></a>
-            <a href=""><div class="cajaGestion">Gestionar Recepcionistas</div></a>
-            <a href=""><div class="cajaGestion">Gestionar Especialidades</div></a>
-            <a href=""><div class="cajaGestion">Gestionar Consultas</div></a>
-            <a href=""><div class="cajaGestion">Gestionar Pacientes</div></a>
-            <a href=""><div class="cajaGestion">Gestionar Citas</div></a>
-        </div>
+        <div class="content">
+            <div class="register">
+                <form id="log-form" action="">
+                    <div class="grupos">
+                        <div class="grupo1">
+                            <label for="nom">Nombre: </label>
+                            <input type="text" placeholder="Nombre" id="form-nom">
+                        </div>
+                        <div class="grupo1">
+                            <label for="nom">Apellidos: </label>
+                            <input type="text" placeholder="Apellidos" id="form-apel">
+                        </div>  
+                        <div class="grupo1">
+                            <label for="nom">Teléfono: </label>
+                            <input type="text" placeholder="Teléfono" id="form-tlf">
+                        </div>
+                    </div>    
+                    <div class="grupos">
+                        <div class="grupo1">
+                            <label for="nom">Dirección: </label>
+                            <input type="text" placeholder="Dirección" id="form-dire">
+                        </div>
+                        <div class="grupo1">
+                            <label for="nom">Población: </label>
+                            <input type="text" placeholder="Población" id="form-pobl">
+                        </div>
+                        <div class="grupo1">
+                            <label for="nom">País: </label>
+                            <input type="text" placeholder="País" id="form-pais">
+                        </div>
+                    </div>
+                    <div class="grupos">
+                        <div class="grupo2">
+                            <label for="nom">Email: </label>
+                            <input type="text" placeholder="Email" id="form-mail">
+                        </div>
+                        <div class="grupo2">
+                            <label for="nom">Usuario: </label>
+                            <input type="text" placeholder="Usuario" id="form-user">
+                        </div>
+                    </div>
+                    <div class="grupos">
+                        <div class="grupo2">
+                            <label for="nom">Contraseña: </label>
+                            <input type="password" placeholder="Contraseña" id="form-passwd">
+                        </div>
+                        <div class="grupo2">
+                            <label for="nom">Confirma la contraseña: </label>
+                            <input type="password" placeholder="Contraseña" id="form-confpass">
+                        </div>
+                    </div>
+                    <div class="grupos">
+                        <button id="btn-register">CREAR PACIENTES</button>
+                    </div>
+                </form>
+            </div>
+            
+            <br><hr><br>
+            <div id="contenedor-paci">
 
+            </div>
+        </div>
     </div>
 </body>
 <script src="https://kit.fontawesome.com/9fbcafb666.js" crossorigin="anonymous"></script>
+s
 </html>

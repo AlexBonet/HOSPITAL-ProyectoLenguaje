@@ -19,7 +19,9 @@ window.addEventListener('DOMContentLoaded', async () => {
             </style>
             <div class="myDiv">
                 <p>Nombre: ${task.nom}</p>
-                <p>HORA: ${task.fh}</p>
+                <p>FECHA Y HORA: ${task.fh}</p>
+                <p>Doctor: ${task.doc}</p>
+                <p>Consulta: ${task.cons}</p>
             </div>
         `;
     });

@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     
-    <title>index</title>
+    <title>GESTIONAR CITAS</title>
 </head>
 <body>
     <div class="mainConteiner">
@@ -31,16 +31,44 @@
             </div>
         </div>
 
-        <div class="tabla">
-            <a href=""><div class="cajaGestion">Gestionar Doctores</div></a>
-            <a href=""><div class="cajaGestion">Gestionar Recepcionistas</div></a>
-            <a href=""><div class="cajaGestion">Gestionar Especialidades</div></a>
-            <a href=""><div class="cajaGestion">Gestionar Consultas</div></a>
-            <a href=""><div class="cajaGestion">Gestionar Pacientes</div></a>
-            <a href=""><div class="cajaGestion">Gestionar Citas</div></a>
+        <div class="content">
+            <div class="register">
+                <form id="cita-form" action="">
+                    <div class="grupos">
+                        <div class="grupo2">
+                            <label for="nom">Nombre Paciente: </label>
+                            <input type="text" placeholder="Nombre" id="nom-gp">
+                        </div>
+                    </div>    
+                    <div class="grupos">
+                        <div class="grupo2">
+                            <label for="nom">Especialidad: </label>
+                            <input type="text" placeholder="Dirección" id="esp-gp">
+                        </div>
+                        <div class="grupo2">
+                            <label for="nom">Doctor: </label>
+                            <input type="text" placeholder="Población" id="doc-gp">
+                        </div>
+                    </div>
+                    <div class="grupos">
+                        <div class="grupo2">
+                            <label for="nom">Fecha y Hora: </label>
+                            <input type="text" placeholder="Email" id="fh-gp">
+                        </div>
+                    </div>
+                    <div class="grupos">
+                        <button id="btn-register">CREAR CITAS</button>
+                    </div>
+                </form>
+            </div>
+            
+            <br><hr><br>
+            <div class="superContenedor">
+                <div id="contenedor-cit"></div>
+            </div>
         </div>
-
     </div>
 </body>
 <script src="https://kit.fontawesome.com/9fbcafb666.js" crossorigin="anonymous"></script>
+<script type="module" src="../js/gestorCitas.js"></script>
 </html>

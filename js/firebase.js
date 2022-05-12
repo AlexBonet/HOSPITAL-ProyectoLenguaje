@@ -23,6 +23,9 @@ const db = getFirestore()
 export const saveF = (nom,ape,dni,fh,txt) => 
     addDoc(collection(db, 'citas'),{nom ,ape ,dni ,fh ,txt})
 
+export const saveCitaGest = (nom,esp,doc,fh,con) => 
+    addDoc(collection(db, 'citas'),{nom ,esp ,doc ,fh,con})
+
 export const getTasks = () => getDocs(collection(db, 'citas'));
 
 export const onGetTasks = (callback) => onSnapshot(collection(db, 'citas'),callback);
