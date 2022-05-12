@@ -90,8 +90,15 @@ a:hover {
     background-color: red;
 }
 
+.registerP{
+    padding-top: 15px;
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    border: 2px solid white;
+}
+
 .grupos{
-    background-color: yellow;
     height: 40px;
     font-size:large;
 }

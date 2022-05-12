@@ -1,28 +1,37 @@
 import { saveCitaGest, getTasks, onGetTasks,deleteTask, getTask, updateTasks } from './firebase.js';
 
-const form = document.getElementById('cita-form')
-const container = document.getElementById('contenedor-cit')
+const form = document.getElementById('cita-form');
+const container = document.getElementById('contenedor-cit');
+
+let editStatus = false;
+let id = '';
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    const nom = form['nom-gp']
-    const doc = form['doc-gp']
-    const esp = form['esp-gp']
-    const con = form['con-gp']
-    const fh = form['fh-gp']
+    const nom = form['nom-gp'];
+    const doc = form['doc-gp'];
+    const esp = form['esp-gp'];
+    const con = form['con-gp'];
+    const fh = form['fh-gp'];
 
-    saveCitaGest(nom.value ,esp.value ,doc.value ,fh.value ,con.value )
-
+    if(!editStatus){
+        saveCitaGest(nom.value ,esp.value ,doc.value ,fh.value ,con.value );
+    }else{
+        updateTasks(id,{nom:nom.value ,esp:esp.value ,doc:doc.value ,fh:fh.value ,con:con.value});
+        editStatus = false;
+    }
+       
     form.reset()
+    form['btn-register'].innerText = 'CREAR CITAS';
 })
 
 window.addEventListener('DOMContentLoaded', async () => {
     onGetTasks((querySnapshot) => {
     let html ="";
 
-    querySnapshot.forEach((doc) => {
-        const task = doc.data();
+    querySnapshot.forEach((docu) => {
+        const task = docu.data();
         html+=`
                 <style>
                 .view{
@@ -72,13 +81,13 @@ window.addEventListener('DOMContentLoaded', async () => {
                 }
             </style>
             <div class="view">
-                <div class="nom"><h2>Sr/a.: ${task.nom}</h2></div>
-                <div class="doc"><h3>Dr/a.: ${task.doc}</h3></div>
-                <div class="esp"><p>${task.esp}</p></div>
-                <div class="fyh"><h3>Fecha y Hora: ${task.fh}</h3></div>    
-                <div class="btn-editar"><button class='btn-edit' data-id="${doc.id}">Editar</button></div>
-                <div class="btn-dlt"><button class='btn-delete' data-id="${doc.id}">Borrar</button></div>
-                <div class="con"><h3>Consulta: ${task.con}</h3></div>
+                <div class="nom"><h2>Sr/a.: <i>${task.nom}</i></h2></div>
+                <div class="doc"><h3>Dr/a.: <i>${task.doc}</i></h3></div>
+                <div class="esp"><p><i>${task.esp}</i></p></div>
+                <div class="fyh"><h3>Fecha y Hora: <i> ${task.fh}</i></h3></div>    
+                <div class="btn-editar"><button class='btn-edit' data-id="${docu.id}">Editar</button></div>
+                <div class="btn-dlt"><button class='btn-delete' data-id="${docu.id}">Borrar</button></div>
+                <div class="con"><h3>Consulta: <i> ${task.con}</i></h3></div>
             </div>
             
             
@@ -97,19 +106,19 @@ window.addEventListener('DOMContentLoaded', async () => {
     const btnsEdit = container.querySelectorAll('.btn-edit')
     btnsEdit.forEach(btn => {
         btn.addEventListener('click',async ({target: {dataset}}) => {
-            const doc = await getTask(dataset.id)
-            const task = doc.data()
+            const docu = await getTask(dataset.id)
+            const task = docu.data()
 
-            form['nom-pc'].value = task.nom;
-            form['ape-pc'].value = task.ape;
-            form['dni-pc'].value = task.dni;
-            form['fh-pc'].value = task.fh;
-            form['txt-pc'].value = task.txt;
+            form['nom-gp'].value = task.nom;
+            form['doc-gp'].value = task.doc;
+            form['esp-gp'].value = task.esp;
+            form['con-gp'].value = task.con;
+            form['fh-gp'].value = task.fh;
            
-//            editStatus = true;
-  //          id = doc.id;
+            editStatus = true;
+            id = docu.id;
 
-    //        form['btn-pc'].innerText = 'Update'
+            form['btn-register'].innerText = 'ACTUALIZAR CITA';
         })
     })
 

@@ -20,7 +20,8 @@ const app = initializeApp(firebaseConfig);
 
 const db = getFirestore()
 
-export const saveF = (nom,ape,dni,fh,txt) => 
+/*CITAS*/
+export const saveF = (nom,ape,dni,fh,txt) => //borrar?
     addDoc(collection(db, 'citas'),{nom ,ape ,dni ,fh ,txt})
 
 export const saveCitaGest = (nom,esp,doc,fh,con) => 
@@ -36,5 +37,16 @@ export const getTask = id => getDoc(doc(db,'citas', id));
 
 export const updateTasks = (id,newFields) => updateDoc(doc(db,"citas",id), newFields);
 
+
+/*PACIENTES*/
 export const logPaciente = (nom,ape,dir,pob,pais,mail,tlf,user,pswd,cpaswd) => 
     addDoc(collection(db, 'pacientes'),{nom,ape,dir,pob,pais,mail,tlf,user,pswd,cpaswd})
+
+export const updatePacientes = (id,newFields) => updateDoc(doc(db,"pacientes",id), newFields);
+
+export const onGetPaciente = (callback) => onSnapshot(collection(db, 'pacientes'),callback);
+
+export const getPaciente = () => getDocs(collection(db, 'pacientes'));
+
+export const deletePacientes = id => deleteDoc(doc(db,'pacientes', id));
+
