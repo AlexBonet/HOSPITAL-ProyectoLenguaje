@@ -15,13 +15,14 @@ window.addEventListener('DOMContentLoaded', async () => {
                 background-color: rgb(58, 197, 181);
                 width: 100%;
                 text-align: center;
+                color:black;
             }
             </style>
             <div class="myDiv">
                 <p>Nombre: ${task.nom}</p>
                 <p>FECHA Y HORA: ${task.fh}</p>
                 <p>Doctor: ${task.doc}</p>
-                <p>Consulta: ${task.cons}</p>
+                <p>Consulta: ${task.con}</p>
             </div>
         `;
     });

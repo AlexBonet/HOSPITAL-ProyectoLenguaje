@@ -71,8 +71,9 @@ a:hover {
       width: 100%;
       height: 80px;
       background-color: rgb(182, 213, 255);
-      border-radius: 25px;
+      border-radius: 10px;
       margin-left:35%;
+      padding: 10px;
 }
 
 .loguito img{
@@ -123,10 +124,12 @@ a:hover {
 }
 
 .listaEspera{
-    background-color: rgb(255, 45, 255);
+    border: 5px ridge rgb(111, 58, 197);
+    color: rgb(111, 58, 197);
     width: 30%;
     margin-left:70%;
     display: inline-block;
+    text-align: center;
 }
 
 .footer{
@@ -193,7 +196,6 @@ a:hover {
 }
 
 /*Botones Pedir cita*/
-
 .btn-pedir-cita-menu{
     border: 1px solid rgb(99, 71, 155);
     background-color: rgb(182, 213, 255);
@@ -353,4 +355,45 @@ a:hover {
     width: 100%;
     margin-left: 35%;
     margin-bottom: 10px ;
+}
+
+/*Mi cuenta paciente*/
+.miCuentaContainer{
+    margin-top: 10px;
+    position: relative;
+    height: 650px;
+    width: 100%;
+    margin-left: 35%;
+    padding-top: 10px;
+}
+
+.cuentaDetalls{
+    position: relative;
+    width: 50%;
+    margin-left: 25%;
+    font-size: large;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.btn-cerrarS{
+    text-align: center;
+    line-height: 100px;
+    background-color: rgb(99, 71, 155);
+    color: rgb(182, 213, 255);
+    width: 24%;
+    height: 100px;
+    margin-left: 38%;
+    margin-top: 100px;
+    font-size: x-large;
+    border-radius: 25px;
+   
+}
+
+.btn-cerrarS:hover{
+    background-color: rgb(182, 213, 255);
+    border: 2px solid rgb(99, 71, 155);
+    line-height: 50px;
+    color: rgb(99, 71, 155);
+
 }
