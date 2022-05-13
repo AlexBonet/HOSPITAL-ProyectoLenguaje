@@ -113,3 +113,72 @@ a{
     width: 34%;
     height: 100%;
 }
+
+.formularioVisitas{
+    font-size: larger;
+    position: relative;
+    width: 60%;
+    height: 600px;
+    display: inline-block;
+}
+
+.cajaNota{
+    margin-top: 25px;
+    width: 82%;
+    margin-left: 9%;
+    float: left;
+}
+
+.btn-notas{
+    margin-top: 300px;
+    margin-left: -52%;
+    height:50px;
+    width:200px;
+}
+.cajaInfoVist{
+    text-align: center;
+}
+
+/*visitas una a una resumidas, donde se ven las citas*/
+.cont-visitas{
+    overflow:scroll;
+    height:400px;
+    width: 38%;
+    float: right;
+    height: 600px;
+}
+
+.visita{
+    width: 95.5%;
+    color: #fff;
+    padding: 10px;
+    border: 2px solid blue;
+    background-color: #000051;
+}
+
+.cita-n{
+    display: inline-block;
+}
+
+.fech-n{
+    margin-left: 100px;
+    display: inline-block;
+}
+
+.edit-n{
+    display: inline-block;
+    float: right;
+    margin-right: 10px;
+}
+
+.info-n{
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.dlte-n{
+    display: inline-block;
+    margin-top: 10px;
+    float: right;
+    margin-right: -65px;
+}
