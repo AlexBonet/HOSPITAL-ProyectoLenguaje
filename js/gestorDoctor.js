@@ -21,14 +21,14 @@ form.addEventListener('submit', (e) => {
     const confpass = '111'
 
     if(!editStatus){
-        logDoctor(nom.value,apel.value,dire.value,pobl.value,pais.value,mail.value,tlf.value,user.value,111,111)
+        logDoctor(nom.value,apel.value, dire.value, pobl.value,pais.value,mail.value,tlf.value,user.value,'111','111')
     }else{
-        updateDoctor(id,{nom:nom.value,apel:apel.value,dire:dire.value,pobl:pobl.value,pais:pais.value,mail:mail.value,tlf:tlf.value,user:user.value});
+        updateDoctor(id,{nom:nom.value,apel:apel.value, dire:dire.value, pobl:pobl.value, pais:pais.value,mail:mail.value,tlf:tlf.value,user:user.value});
         editStatus = false;
     }
 
     form.reset();
-    form['btn-register'].innerText = 'Crear Doctor';
+    form['btn-register'].innerText = 'CREAR DOCTOR'
 })
 
 window.addEventListener('DOMContentLoaded', async () => {
@@ -53,7 +53,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                     margin-left: 15px;
                     width: 30%;
                 }
-                .dir{
+                .ubic{
                     margin-left: 15px;
                     width: 30%;
                     margin-top: -5px;
@@ -70,13 +70,13 @@ window.addEventListener('DOMContentLoaded', async () => {
                     margin-left: 45%;
                     width: 20%;
                 }
-                .btn-edt{
+                .btn-dlt{
                     position: static;
                     margin-top: -90px;
                     float: right;
                     width: 5%;
                 }
-                .btn-dlt{
+                .btn-edt{
                     position: static;
                     margin-top: -50px;
                     float: right;
@@ -85,12 +85,12 @@ window.addEventListener('DOMContentLoaded', async () => {
                 
             </style>
             <div class="view">
-                <div class="nom"><h2>Sr/a.: <i>${task.nom} ${task.ape}</i></h2></div>
-                <div class="dir"><p><i>${task.dire}, ${task.pobl} , ${task.pais}</i></p></div>
-                <div class="user"><p><i>${task.user}</i></p></div> 
-                <div class="mail"><p><i>${task.mail}</i></p></div>
-                <div class="btn-edt"><button class='btn-delete' data-id="${doc.id}">Borrar</button></div>
-                <div class="btn-dlt"><button class='btn-edit' data-id="${doc.id}">Editar</button></div>
+                <div class="nom"><h2>Sr/a.: <i>${task.nom} ${task.apel}</i></h2></div>
+                <div class="ubic"><p><i> ${task.dire} , ${task.pobl} , ${task.pais} </i></p></div>
+                <div class="user"><p>Usuario: <i>${task.user}</i></p></div> 
+                <div class="mail"><p>Email: <i>${task.mail}</i></p></div>
+                <div class="btn-dlt"><button class='btn-delete' data-id="${doc.id}">Borrar</button></div>
+                <div class="btn-edt"><button class='btn-edit' data-id="${doc.id}">Editar</button></div>
             </div>
         `;
     });

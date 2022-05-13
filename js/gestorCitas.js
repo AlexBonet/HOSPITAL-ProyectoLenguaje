@@ -1,4 +1,4 @@
-import { saveCitaGest, getTasks, onGetTasks,deleteTask, getTask, updateTasks } from './firebase.js';
+import { saveCitaGest, onGetTasks,deleteTask, getTask, updateTasks } from './firebase.js';
 
 const form = document.getElementById('cita-form');
 const container = document.getElementById('contenedor-cit');

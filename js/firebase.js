@@ -39,26 +39,38 @@ export const updateTasks = (id,newFields) => updateDoc(doc(db,"citas",id), newFi
 
 
 /*PACIENTES*/
-export const logPaciente = (nom,ape,dir,pob,pais,mail,tlf,user,pswd,cpaswd) => 
-    addDoc(collection(db, 'pacientes'),{nom,ape,dir,pob,pais,mail,tlf,user,pswd,cpaswd})
+export const logPaciente = (nom,apel,dire,pobl,pais,mail,tlf,user,pswd,cpaswd) => 
+    addDoc(collection(db, 'pacientes'),{nom,apel,dire,pobl,pais,mail,tlf,user,pswd,cpaswd})
 
 export const updatePacientes = (id,newFields) => updateDoc(doc(db,"pacientes",id), newFields);
 
 export const onGetPaciente = (callback) => onSnapshot(collection(db, 'pacientes'),callback);
 
-export const getPaciente = () => getDocs(collection(db, 'pacientes'));
+export const getPaciente = id => getDoc(doc(db,'pacientes', id));
 
 export const deletePacientes = id => deleteDoc(doc(db,'pacientes', id));
 
 
 /*DOCTORES*/
-export const logDoctor = (nom,ape,dir,pob,pais,mail,tlf,user,pswd,cpaswd) => 
-    addDoc(collection(db, 'doctores'),{nom,ape,dir,pob,pais,mail,tlf,user,pswd,cpaswd})
+export const logDoctor = (nom,apel,dire,pobl,pais,mail,tlf,user,pswd,cpaswd) => 
+    addDoc(collection(db, 'doctores'),{nom,apel,dire,pobl,pais,mail,tlf,user,pswd,cpaswd})
 
 export const updateDoctor = (id,newFields) => updateDoc(doc(db,"doctores",id), newFields);
 
 export const onGetDoctor = (callback) => onSnapshot(collection(db, 'doctores'),callback);
 
-export const getDoctor = () => getDocs(collection(db, 'doctores'));
+export const getDoctor = id => getDoc(doc(db,'doctores', id));
 
 export const deleteDoctor = id => deleteDoc(doc(db,'doctores', id));
+
+/*RECEPCIONISTAS*/
+export const logRecep = (nom,apel,dire,pobl,pais,mail,tlf,user,pswd,cpaswd) => 
+    addDoc(collection(db, 'recep'),{nom,apel,dire,pobl,pais,mail,tlf,user,pswd,cpaswd})
+
+export const updateRecep = (id,newFields) => updateDoc(doc(db,"recep",id), newFields);
+
+export const onGetRecep = (callback) => onSnapshot(collection(db, 'recep'),callback);
+
+export const getRecep = id => getDoc(doc(db,'recep', id));
+
+export const deleteRecep = id => deleteDoc(doc(db,'recep', id));
