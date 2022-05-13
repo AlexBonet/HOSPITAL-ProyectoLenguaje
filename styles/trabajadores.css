@@ -1,0 +1,115 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    width: 80%;
+    margin-left: 10%;
+    background-color: #1a237e;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+  
+ul li {
+    float: right;
+}
+  
+li a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main-content{
+    margin-top: 40px;
+}
+
+/*nav bar*/
+.navPanel{
+    background-color: #006064;
+    color: white;
+    font-size: larger;
+}
+
+.navPanel a{
+    padding: 10px;
+}
+
+.loguito img{
+    position: relative;
+	width: 	150px;
+    height: 80px;
+	max-height: 	200px;
+	max-width: 	100%;
+}
+
+.menu{
+    position: relative;
+	margin-top: -85px;
+    margin-right: 50px;
+        color: #80dfea;
+
+}
+
+.menu li ul{
+    display: none;
+    position: absolute;
+    
+}
+.menu li:hover > ul{
+    display: block;
+    margin-left: -40px;
+    
+}
+
+.cajaMenu{
+    margin-left: 50px;
+    width: 200px;
+    border-right: 1px solid #80dfea;
+    
+
+}
+
+.cajaMenu:hover{
+    background-color: #00bdd4;
+    border: 2px solid #640300;
+    
+}
+
+.cajaMenu a{
+    color: #80dfea;
+}
+
+.cajaMenu a:hover{
+    color: #000051;
+    font-weight:bold;
+
+}
+
+
+/*Resto de contenido en indexDr*/
+.nombreOriginal{
+    margin-top: 140px;
+    background-color: #534bae;
+    height: 600px;
+}
+
+.consultasOverView{
+    background-color: yellowgreen;
+    width: 65%;
+    display: inline-block;
+    height: 100%;
+    border: 1px solid orange;
+}
+
+.algoExtraKeEncaraNSKeS{
+    background-color: red;
+    float: right;
+    width: 34%;
+    height: 100%;
+}
