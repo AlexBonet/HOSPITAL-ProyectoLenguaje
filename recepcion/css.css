@@ -1,0 +1,37 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    width: 80%;
+    margin-left: 10%;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+}
+
+.loguito img{
+	width: 	150px;
+    height: 80px;
+	max-height: 	200px;
+	max-width: 	100%;
+    
+}
+
+.navPanel{
+    border: 2px solid red;
+}
+
+.menu{
+    display: inline-block;
+    width: 15%;
+    background-color: red;
+    float: right;
+    margin-top: -67.5px;
+    margin-right: 20px;
+    
+}
+

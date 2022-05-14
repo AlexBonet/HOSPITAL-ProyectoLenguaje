@@ -182,3 +182,24 @@ a{
     float: right;
     margin-right: -65px;
 }
+
+/*Perfil del doctor*/
+.miCuentaContainer{
+    margin-top: 120px;
+    background-color: #00bdd4;
+    width: 80%;
+    margin-left: 10%;
+    height: 600px;
+    padding-top: 10px
+    
+}
+
+.cuentaDetalls{
+    background-color: #640300;
+    width: 30%;
+    margin-left: 35%;
+    padding: 10px;
+    border: 2px solid greenyellow;
+}
+
+
