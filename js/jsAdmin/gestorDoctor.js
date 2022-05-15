@@ -1,7 +1,7 @@
-import { logPaciente, onGetPaciente, deletePacientes, getPaciente, updatePacientes } from './firebase.js';
+import { logDoctor, onGetDoctor, deleteDoctor, getDoctor, updateDoctor } from '../firebase.js';
 
 const form = document.getElementById('log-form')
-const container = document.getElementById('contenedor-paci')
+const container = document.getElementById('contenedor-doc')
 
 let editStatus = false;
 let id = '';
@@ -17,22 +17,22 @@ form.addEventListener('submit', (e) => {
     const mail = form['form-mail']
     const tlf = form['form-tlf']
     const user = form['form-user']
-    const passwd = form['form-passwd']
-    const confpass = form['form-confpass']
+    const passwd = '111'
+    const confpass = '111'
 
     if(!editStatus){
-        logPaciente(nom.value,apel.value,dire.value,pobl.value,pais.value,mail.value,tlf.value,user.value,passwd.value,confpass.value)
+        logDoctor(nom.value,apel.value, dire.value, pobl.value,pais.value,mail.value,tlf.value,user.value,'111','111')
     }else{
-        updatePacientes(id,{nom:nom.value,apel:apel.value,dire:dire.value,pobl:pobl.value,pais:pais.value,mail:mail.value,tlf:tlf.value,user:user.value,passwd:passwd.value,confpass:confpass.value});
+        updateDoctor(id,{nom:nom.value,apel:apel.value, dire:dire.value, pobl:pobl.value, pais:pais.value,mail:mail.value,tlf:tlf.value,user:user.value});
         editStatus = false;
     }
 
     form.reset();
-    form['btn-register'].innerText = 'Crear Paciente';
+    form['btn-register'].innerText = 'CREAR DOCTOR'
 })
 
 window.addEventListener('DOMContentLoaded', async () => {
-    onGetPaciente((querySnapshot) => {
+    onGetDoctor((querySnapshot) => {
     let html ="";
 
     querySnapshot.forEach((doc) => {
@@ -53,7 +53,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                     margin-left: 15px;
                     width: 30%;
                 }
-                .dir{
+                .ubic{
                     margin-left: 15px;
                     width: 30%;
                     margin-top: -5px;
@@ -70,13 +70,13 @@ window.addEventListener('DOMContentLoaded', async () => {
                     margin-left: 45%;
                     width: 20%;
                 }
-                .btn-edt{
+                .btn-dlt{
                     position: static;
                     margin-top: -90px;
                     float: right;
                     width: 5%;
                 }
-                .btn-dlt{
+                .btn-edt{
                     position: static;
                     margin-top: -50px;
                     float: right;
@@ -86,11 +86,11 @@ window.addEventListener('DOMContentLoaded', async () => {
             </style>
             <div class="view">
                 <div class="nom"><h2>Sr/a.: <i>${task.nom} ${task.apel}</i></h2></div>
-                <div class="dir"><p><i>${task.dire}, ${task.pobl} , ${task.pais}</i></p></div>
+                <div class="ubic"><p><i> ${task.dire} , ${task.pobl} , ${task.pais} </i></p></div>
                 <div class="user"><p>Usuario: <i>${task.user}</i></p></div> 
                 <div class="mail"><p>Email: <i>${task.mail}</i></p></div>
-                <div class="btn-edt"><button class='btn-delete' data-id="${doc.id}">Borrar</button></div>
-                <div class="btn-dlt"><button class='btn-edit' data-id="${doc.id}">Editar</button></div>
+                <div class="btn-dlt"><button class='btn-delete' data-id="${doc.id}">Borrar</button></div>
+                <div class="btn-edt"><button class='btn-edit' data-id="${doc.id}">Editar</button></div>
             </div>
         `;
     });
@@ -100,14 +100,14 @@ window.addEventListener('DOMContentLoaded', async () => {
     const btnsDelete = container.querySelectorAll('.btn-delete')
     btnsDelete.forEach(btn => {
         btn.addEventListener('click',({target: {dataset}}) => {
-            deletePacientes(dataset.id)
+            deleteDoctor(dataset.id)
         })
     })
 
     const btnsEdit = container.querySelectorAll('.btn-edit');
     btnsEdit.forEach(btn => {
         btn.addEventListener('click',async ({target: {dataset}}) => {
-            const doc = await getPaciente(dataset.id);
+            const doc = await getDoctor(dataset.id);
             const task = doc.data();
 
             form['form-nom'].value = task.nom;
@@ -118,9 +118,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             form['form-mail'].value = task.mail;
             form['form-tlf'].value = task.tlf;
             form['form-user'].value = task.user;
-            form['form-passwd'].value = task.passwd;
-            form['form-confpass'].value = task.confpass;
-
+            
             editStatus = true;
             id = doc.id;
 

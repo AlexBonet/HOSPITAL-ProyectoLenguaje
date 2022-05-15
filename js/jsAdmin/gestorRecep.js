@@ -1,4 +1,4 @@
-import { logRecep, onGetRecep, deleteRecep, getRecep, updateRecep } from './firebase.js';
+import { logRecep, onGetRecep, deleteRecep, getRecep, updateRecep } from '../firebase.js';
 
 const form = document.getElementById('log-form')
 const container = document.getElementById('contenedor-recep')
@@ -49,7 +49,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                 }
                 .nom{
                     margin-left: 15px;
-                    width: 30%;
+                    width: 40%;
                 }
                 .dir{
                     margin-left: 15px;

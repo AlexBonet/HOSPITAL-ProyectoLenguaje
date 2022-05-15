@@ -88,6 +88,8 @@ a:hover {
 .register{
     text-align: center;
     background-color: red;
+    width: max-content;
+    margin-left:25%;
 }
 
 .registerP{
@@ -98,13 +100,20 @@ a:hover {
     border: 2px solid white;
 }
 
+.registerC{
+    padding-top: 15px;
+    text-align: center;
+    width: 20%;
+    margin-left: 40%;
+    border: 2px solid white;
+}
+
 .grupos{
     height: 40px;
     font-size:large;
 }
 
 .grupo1{
-    background-color: aquamarine;
     line-height: 30px;
     height: 30px;
     width: 300px;
@@ -112,10 +121,16 @@ a:hover {
 }
 
 .grupo2{
-    background-color: burlywood;
     height: 30px;
     line-height: 30px;
     width: 450px;
+    display: inline-block;
+}
+
+.grupo3{
+    height: 30px;
+    line-height: 30px;
+    width: 350px;
     display: inline-block;
 }
 

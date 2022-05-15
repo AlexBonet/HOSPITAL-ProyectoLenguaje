@@ -1,4 +1,4 @@
-import { saveCitaGest, onGetTasks,deleteTask, getTask, updateTasks } from './firebase.js';
+import { saveCitaGest, onGetTasks,deleteTask, getTask, updateTasks } from '../firebase.js';
 
 const form = document.getElementById('cita-form');
 const container = document.getElementById('contenedor-cit');
@@ -45,7 +45,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                 }
                 .nom{
                     margin-left: 15px;
-                    width: 20%;
+                    width: 30%;
                 }
                 .doc{
                     margin-left: 15px;

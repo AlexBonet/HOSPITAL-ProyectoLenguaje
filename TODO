@@ -1,24 +1,41 @@
 FER ESPECIALIDADES 
 
-Parte Genereal:
-- #Inicio arrehlar colors lista de espera
-- #Identicarse poder fer la consula a la db, a parte tenim que saber diferenciar entre dirents contes
+Parte ADMIN (htmlsAdmin):
+- FALTA JS: CONSULTAS Y ESPECIALIDDES al complet
+
+Parte Genereal(htmls):
+- #Identicarse LOGIN, a parte tenim que saber diferenciar entre dirents contes
 - #Registrar pensar cap a on podem anar desde que li donem a identificarse
+- #Especialidades (necesitem tindre especialidades del admin)
 
-Parte Paciente:
+Parte Paciente (htmlsPaciente):
 - #Inicio arrehlar colors lista de espera
-- #MiCuenta fer per complet
+- #MiCuenta fer que els camps se completen (necesitem un login)
+- #Especialidades (necesitem tindre especialidades del admin)
+- que funcione el cerrar sesion?? o que porte al general o a identificarse
 
-Parte ADMIN:
-- FALTA ESPECIALIDADES Y CONSULTAS y definir el formato de gestion de citas
+Parte Doctor (htmlsDoctor)
+- #Principal fer
+- #Visitas arreglar colors
+- #MiPerfil fer que els camps se completen (necesitem un login), posarli bé el boton de cerrar sesion
+- #Consultas fer
+- cambiar lo de dalt de totes 
 
-FER parte de DOCTOR y recepcion
+Parte recepcion (recepcion)
+- fer per complet
 
-
+Atres coses:
+- Comprobar contraseñes
+- enviar correu de confimacion al paciente
+- @doctor cambiar de contraseña
+- @trabajadores generar contraseña  8 dígitos al menos una mayúscula / minúscula / número / símbolo
+- asignar consultas automaticamente y controlar que no haya conflictos entre doctores y despachos
+- @paciente podra buscar por especialidad y doctors en #pedirCita
+- @paciente seleccionará hora disponible en #pedirCita
+- enviar correu en datos de reserva a @paciente
+- avisar al paciente antes para recordarle la cita
+- falta en el pdf desde doctores:
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 PRIORITI LIST
-1º fer el mi cuenta de cuenta
-
-3º Començar doctor y recepcion
-4º especialidades y consultas
+1º LOGIN
