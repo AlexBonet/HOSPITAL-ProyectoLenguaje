@@ -51,7 +51,7 @@
         <div class="register">
             <form id="log-form" action="">
                 <label for="nom">Nombre: </label>
-                <input type="text" placeholder="Nombre" id="form-nom">
+                <input type="text" placeholder="Nombre" id="form-nom" required>
                 <br><br>
                 <label for="nom">Apellidos: </label>
                 <input type="text" placeholder="Apellidos" id="form-apel">
@@ -65,8 +65,8 @@
                 <label for="nom">País: </label>
                 <input type="text" placeholder="País" id="form-pais">
                 <br><br>
-                <label for="nom">Email: </label>
-                <input type="text" placeholder="Email" id="form-mail">
+                <label for="nom">Email: </label> <!-- PILLAR PA EL LOGIN -->
+                <input type="email" placeholder="Email" id="form-mail" required>
                 <br><br>
                 <label for="nom">Teléfono: </label>
                 <input type="text" placeholder="Teléfono" id="form-tlf">
@@ -74,13 +74,15 @@
                 <label for="nom">Usuario: </label>
                 <input type="text" placeholder="Usuario" id="form-user">
                 <br><br>
-                <label for="nom">Contraseña: </label>
-                <input type="password" placeholder="Contraseña" id="form-passwd">
+                <label for="nom">Contraseña: </label><!-- PILLAR PA EL LOGIN -->
+                <input type="password" placeholder="Contraseña" id="form-passwd" required>
                 <br><br>
                 <label for="nom">Confirma la contraseña: </label>
-                <input type="password" placeholder="Contraseña" id="form-confpass">
+                <input type="password" placeholder="Contraseña" id="form-confpass" required>
                 <br><br>
                 <button id="btn-register">IDENTIFICARSE</button>
+                
+                
                 
 
             </form>

@@ -1,4 +1,4 @@
-import { logPaciente } from './firebase.js';
+import { logPaciente,autentifiacar } from './firebase.js';
 
 const form = document.getElementById('log-form')
 
@@ -16,7 +16,29 @@ form.addEventListener('submit', (e) => {
     const pswd = form['form-passwd']
     const cpaswd = form['form-confpass']
 
-    logPaciente(nom.value,ape.value,dir.value,pob.value,pais.value,mail.value,tlf.value,user.value,pswd.value,cpaswd.value)
+    logPaciente(nom.value,ape.value,dir.value,pob.value,pais.value,mail.value,tlf.value,user.value,pswd.value,cpaswd.value);
+    autentifiacar(mail.value, pswd.value);
 
-    form.reset()
+    form.reset();
+    window.location.href="./identificarse.html";
 })
+
+/*
+const singup = document.querySelector('');
+
+singup.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const mail = form['form-mail']
+    const pswd = form['form-passwd']
+
+    auth.createUserWhithEmailAndPassword(mail.value, pswd.value)
+        .then((userCredential) => {
+        // Signed in
+        console.log('usuario registrado')
+        //const user = userCredential.user;
+        // ...
+      })
+
+    
+})*/

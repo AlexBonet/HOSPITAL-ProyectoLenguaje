@@ -2,8 +2,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-app.js";
 import { getFirestore, collection, addDoc, getDocs, onSnapshot, deleteDoc, doc, getDoc, updateDoc
         } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-firestore.js"
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-auth.js"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -19,6 +18,17 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const db = getFirestore()
+
+/*AUTENTIFICACION*/
+const auth = getAuth();
+export const autentifiacar  = (mail, pswd) =>
+    createUserWithEmailAndPassword(auth, mail, pswd)
+        .then((userCredential) => {
+        // Signed in
+        console.log('usuario registrado')
+        //const user = userCredential.user;
+        });
+
 
 /*CITAS*/
 export const saveF = (nom,ape,dni,fh,txt) => //borrar?

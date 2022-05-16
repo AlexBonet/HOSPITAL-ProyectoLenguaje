@@ -55,20 +55,20 @@ window.addEventListener('DOMContentLoaded', async () => {
                 }
                 .dir{
                     margin-left: 15px;
-                    width: 30%;
+                    width: 40%;
                     margin-top: -5px;
                 }
                 .mail{
                     position: relative;
                     margin-left: 45%;
                     margin-top: 20px;
-                    width: 20%;
+                    width: 40%;
                 }
                 .user{
                     position: relative;
                     margin-top: -90px;
                     margin-left: 45%;
-                    width: 20%;
+                    width: 40%;
                 }
                 .btn-edt{
                     position: static;
