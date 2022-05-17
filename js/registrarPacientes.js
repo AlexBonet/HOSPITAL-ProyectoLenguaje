@@ -22,23 +22,3 @@ form.addEventListener('submit', (e) => {
     form.reset();
     window.location.href="./identificarse.html";
 })
-
-/*
-const singup = document.querySelector('');
-
-singup.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const mail = form['form-mail']
-    const pswd = form['form-passwd']
-
-    auth.createUserWhithEmailAndPassword(mail.value, pswd.value)
-        .then((userCredential) => {
-        // Signed in
-        console.log('usuario registrado')
-        //const user = userCredential.user;
-        // ...
-      })
-
-    
-})*/

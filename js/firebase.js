@@ -2,7 +2,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-app.js";
 import { getFirestore, collection, addDoc, getDocs, onSnapshot, deleteDoc, doc, getDoc, updateDoc
         } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-firestore.js"
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-auth.js"
+import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged 
+        } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-auth.js"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -22,12 +23,58 @@ const db = getFirestore()
 /*AUTENTIFICACION*/
 const auth = getAuth();
 export const autentifiacar  = (mail, pswd) =>
-    createUserWithEmailAndPassword(auth, mail, pswd)
+    createUserWithEmailAndPassword (auth, mail, pswd)
         .then((userCredential) => {
         // Signed in
         console.log('usuario registrado')
         //const user = userCredential.user;
         });
+
+export const loguear  = (mail,pswd)  =>
+    signInWithEmailAndPassword(auth, mail, pswd)
+        .then((userCredential) => {
+        // Signed in
+        console.log('usuario logueado')
+        //const user = userCredential.user;
+        });
+
+export const salir  = ()  =>
+    signOut(auth).then(() => {
+        // Sign-out successful.
+        console.log('')
+    }).catch((error) => {
+        // An error happened.
+    });
+
+export const getUserPaciente  = ()  =>
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            console.log('auth: usuario logueado')
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+            const uid = user.uid;
+            db.collection('pacientes').getPaciente(uid);
+            
+            loginCheck(user)    
+        
+        } else {
+        // User is signed out
+            loginCheck(user)    
+            console.log('auth: no hay usuario logueado')
+        
+        }
+    }); 
+
+export const loginCheck = user => {
+    if(user){
+        loggedIn.forEach(link => link.style.display = 'block' );
+        loggedOut.forEach(link => link.style.display = 'none' );
+    }else{
+        loggedIn.forEach(link => link.style.display = 'none' );
+        loggedOut.forEach(link => link.style.display = 'block' );
+    }
+
+}
 
 
 /*CITAS*/
