@@ -1,4 +1,4 @@
-import { logPaciente, onGetPaciente, deletePacientes, getPaciente, updatePacientes } from '../firebase.js';
+import { logPaciente, onGetPaciente, deletePacientes, getPaciente, updatePacientes, autentifiacar } from '../firebase.js';
 
 const form = document.getElementById('log-form')
 const container = document.getElementById('contenedor-paci')
@@ -22,6 +22,8 @@ form.addEventListener('submit', (e) => {
 
     if(!editStatus){
         logPaciente(nom.value,apel.value,dire.value,pobl.value,pais.value,mail.value,tlf.value,user.value,passwd.value,confpass.value)
+        autentifiacar(mail.value, passwd.value);
+
     }else{
         updatePacientes(id,{nom:nom.value,apel:apel.value,dire:dire.value,pobl:pobl.value,pais:pais.value,mail:mail.value,tlf:tlf.value,user:user.value,passwd:passwd.value,confpass:confpass.value});
         editStatus = false;

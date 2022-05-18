@@ -2,8 +2,6 @@ body{
     font-family: 'Montserrat', sans-serif;
     width: 80%;
     margin-left: 10%;
-    background-color: #1a237e;
-    color: white;
 }
 
 ul {
@@ -31,9 +29,9 @@ a{
 
 /*nav bar*/
 .navPanel{
-    background-color: #006064;
-    color: white;
     font-size: larger;
+    border: 2px solid rgb(58, 197, 181);
+    height: 80px;
 }
 
 .navPanel a{
@@ -52,7 +50,6 @@ a{
     position: relative;
 	margin-top: -85px;
     margin-right: 50px;
-        color: #80dfea;
 
 }
 
@@ -63,30 +60,32 @@ a{
 }
 .menu li:hover > ul{
     display: block;
-    margin-left: -40px;
-    
+    margin-left: 53px;
+    background-color: white;
+    width: 160px;
 }
 
 .cajaMenu{
     margin-left: 50px;
     width: 200px;
-    border-right: 1px solid #80dfea;
+    border-right: 1px solid rgb(58, 197, 181);
     
 
 }
 
 .cajaMenu:hover{
-    background-color: #00bdd4;
-    border: 2px solid #640300;
+    border: 2px solid rgb(58, 197, 181);
+    background-color: white;
+    
     
 }
 
 .cajaMenu a{
-    color: #80dfea;
+    color: black;
 }
 
 .cajaMenu a:hover{
-    color: #000051;
+    color: rgb(58, 197, 181);
     font-weight:bold;
 
 }
@@ -94,8 +93,8 @@ a{
 
 /*Resto de contenido en indexDr*/
 .nombreOriginal{
-    margin-top: 140px;
-    background-color: #534bae;
+    margin-top: 40px;
+    background-color: white;
     height: 600px;
 }
 
@@ -104,22 +103,29 @@ a{
     width: 65%;
     display: inline-block;
     height: 100%;
-    border: 1px solid orange;
+    border: 4px solid rgb(58, 197, 181);
 }
 
-.algoExtraKeEncaraNSKeS{
+.contenedorSecundario{
     background-color: red;
     float: right;
-    width: 34%;
+    width: 33.95%;
     height: 100%;
+    border: 4px solid rgb(58, 197, 181);
+
 }
 
+
+
+/*esto es diferente?*/
 .formularioVisitas{
     font-size: larger;
     position: relative;
     width: 60%;
     height: 600px;
     display: inline-block;
+    border: 5px solid rgb(58, 197, 181);
+
 }
 
 .cajaNota{
@@ -143,17 +149,19 @@ a{
 .cont-visitas{
     overflow:scroll;
     height:400px;
-    width: 38%;
+    width: 38.65%;
     float: right;
     height: 600px;
+    border: 5px solid rgb(58, 197, 181);
+
 }
 
 .visita{
     width: 95.5%;
-    color: #fff;
     padding: 10px;
-    border: 2px solid blue;
-    background-color: #000051;
+    border: 2px solid #c53a4a;
+    
+    
 }
 
 .cita-n{
@@ -185,8 +193,7 @@ a{
 
 /*Perfil del doctor*/
 .miCuentaContainer{
-    margin-top: 120px;
-    background-color: #00bdd4;
+    margin-top: 50px;
     width: 80%;
     margin-left: 10%;
     height: 600px;
@@ -195,11 +202,26 @@ a{
 }
 
 .cuentaDetalls{
-    background-color: #640300;
+    background-color: rgb(58, 197, 181);
     width: 30%;
     margin-left: 35%;
     padding: 10px;
-    border: 2px solid greenyellow;
+    border: 2px solid #c53a4a;
 }
 
+.btn-cerrarS{
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 50px;
+    height: 80px;
+    color: black;
+    text-align: center;
+    font-size: x-large;
+    border: 3px solid rgb(58, 197, 181);
+}
 
+.btn-cerrarS:hover{
+    border: 3px solid #c53a4a;
+    background-color: rgb(58, 197, 181);
+    color: white;
+}

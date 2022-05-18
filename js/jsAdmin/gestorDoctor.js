@@ -1,4 +1,4 @@
-import { logDoctor, onGetDoctor, deleteDoctor, getDoctor, updateDoctor } from '../firebase.js';
+import { logDoctor, onGetDoctor, deleteDoctor, getDoctor, updateDoctor, autentifiacar } from '../firebase.js';
 
 const form = document.getElementById('log-form')
 const container = document.getElementById('contenedor-doc')
@@ -17,11 +17,11 @@ form.addEventListener('submit', (e) => {
     const mail = form['form-mail']
     const tlf = form['form-tlf']
     const user = form['form-user']
-    const passwd = '111'
-    const confpass = '111'
 
     if(!editStatus){
-        logDoctor(nom.value,apel.value, dire.value, pobl.value,pais.value,mail.value,tlf.value,user.value,'111','111')
+        logDoctor(nom.value,apel.value, dire.value, pobl.value,pais.value,mail.value,tlf.value,user.value,"123456","123456");
+        autentifiacar(mail.value, "123456");
+
     }else{
         updateDoctor(id,{nom:nom.value,apel:apel.value, dire:dire.value, pobl:pobl.value, pais:pais.value,mail:mail.value,tlf:tlf.value,user:user.value});
         editStatus = false;
@@ -51,24 +51,24 @@ window.addEventListener('DOMContentLoaded', async () => {
                 }
                 .nom{
                     margin-left: 15px;
-                    width: 30%;
+                    width: 40%;
                 }
                 .ubic{
                     margin-left: 15px;
-                    width: 30%;
+                    width: 40%;
                     margin-top: -5px;
                 }
                 .mail{
                     position: relative;
                     margin-left: 45%;
                     margin-top: 20px;
-                    width: 20%;
+                    width: 40%;
                 }
                 .user{
                     position: relative;
                     margin-top: -90px;
                     margin-left: 45%;
-                    width: 20%;
+                    width: 40%;
                 }
                 .btn-dlt{
                     position: static;

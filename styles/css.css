@@ -326,6 +326,28 @@ a:hover {
     z-index: 100;
 }
 
+.botoncinOut{
+    display: none;
+    position: relative;
+    background-color: rgb(182, 213, 255);
+    border-radius: 25px;
+    width: 185px;
+    height: 70px;
+    margin-left: 77%;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 70px ;
+    z-index: 100;
+}
+
+.botoncinOut:hover{
+    color: rgb(99, 71, 155);
+    background-color: rgb(182, 213, 255);
+    border: 1px solid rgb(99, 71, 155);
+    font-weight: bold;
+    z-index: 100;
+}
+
 
 /*REGISTRARSE*/
 .register{

@@ -57,6 +57,7 @@ a:hover {
 .menu li div:hover{
     border: 1px solid rgb(255, 0, 0) ;
     background-color: rgb(52, 94, 52);
+    margin-right: -2px;
 }
 
 .tabla{
@@ -86,10 +87,11 @@ a:hover {
 
 /*GESTIONES INDIVIUDUAL*/
 .register{
+    padding-top: 15px;
     text-align: center;
-    background-color: red;
-    width: max-content;
-    margin-left:25%;
+    margin-left:23%;
+    width: 54%;
+    border: 2px solid white;
 }
 
 .registerP{
@@ -136,4 +138,51 @@ a:hover {
 
 .superContenedor{
     padding-left: 10%;
+}
+
+.contendor-cambio{
+    width: 80%;
+    height: 700px;
+    margin-left: 10%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.identifier{
+    position: relative;
+    height: 120px;
+    width: 30%;
+    font-size: xx-large;
+    margin-left: 35%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    color: #c0dde9;
+    border: 5px solid #c0dde9;
+
+}
+
+.btn-logIn{
+    margin-left: 28%;
+}
+
+.btn-logOut{
+    position: relative;
+    height: 80px;
+    width: 20%;
+    font-size: x-large;
+    margin-top: 50px;
+    margin-left: 40%;
+    line-height: 40px;
+    text-align: center;
+    color: #c0dde9;
+    border: 2px solid #c0dde9;
+
+}
+
+.btn-logOut:hover{
+    background-color: rgb(52, 94, 52);
+    border: 2px solid red;
+
 }
