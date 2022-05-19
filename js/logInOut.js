@@ -9,16 +9,6 @@ form.addEventListener('submit', (e) => {
     const pswd = form['form-passwd']
 
     loguear(mail.value, pswd.value);
-    /*
-    if(){//TODO
-        console.log('logueado con exito')
-        const user = getUser
-        window.location.href="../htmlPaciente/index.html";
-        
-        
-    }else{
-        console.log('Mal')
-    }*/
 
     form.reset();
 })
@@ -26,17 +16,12 @@ form.addEventListener('submit', (e) => {
 
 
     const logout = document.getElementById('log-out')
-    //const logout2 = document.querySelectorAll('.loggedin')
     logout.addEventListener('submit', (e) => {
         e.preventDefault()
         salir();
 
-    })/*
-    logout2.addEventListener('submit', (e) => {
-        e.preventDefault()
-        salir();
+    })
 
-    })*/
 
 window.onload = function () {
     console.log("usuario? " + loginCheck());

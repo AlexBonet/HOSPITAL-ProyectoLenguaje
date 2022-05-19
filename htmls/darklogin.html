@@ -12,71 +12,44 @@
 </head>
 <body>
     <div class="mainConteiner">
-        <div class="header">
+        <div class="navPanel">
             <div class="loguito">
-                <a href="index.html"><img src="../i/loguito.png" alt="Loguito"></a>
+                <a href="./indexDr.html"><img src="../i/loguito.png" alt="Loguito"></a>
             </div>
-            <div>
-                <ul class="menu">
-                    <li><div class="cajaMenu"><a href="./identificarse.html">Identificarse</a></div>
-                        <ul>
-                            <li><div class="cajaMenu"><a href="./registrar.html">Registrarse</a></div></li>
-                        </ul>
-                    </li>
-                    <li><div class="cajaMenu"><a href="./contacto.html">Contacto</a></div></li>
-                    <li><div class="cajaMenu"><a href="./especialidades.html">Especialidades</a></div></li>
-                    <li><div class="cajaMenu"><a href="./nuestroCentro.html">Nuestro Centro</a></div></li>
-                    
+            <div class="menu">
+                <ul class="menul">
+                    <li><div class="cajaMenu"><a href="./identificarse.html">VOLVER</a></div></li>
                 </ul>
             </div>
         </div>
 
-        <div class="iniciaSes">
-            <div class="galeriLog">
-                <img src="../i/backLoger.jpg" alt="foto del hospital">
-            </div>  
-    
-            <div class="identifier">
-                <form id="log-form" action="">
-                    <label for="nom"><b>Email</b></label><!-- PILLAR PA EL LOGIN -->
+        <div class="restContainer">
+            <div class="tipos">
+                <div class="btn-tipo"><button id="btn-adm" style="height:3em; width:21em">ADMINISTRADOR</button></div>
+                <div class="btn-tipo"><button id="btn-dr" style="height:3em; width:21em">DOCTOR</button></div>
+                <div class="btn-tipo"><button id="btn-recp" style="height:3em; width:21em">RECEPCIONISTA</button></div>
+            </div>
+
+            <div class="logger">
+                <form action="" id="log-form">
+                    <label for="">EMAIL: </label>
+                    <input type="text" name="" id="form-mail" placeholder="EMAIL">
                     <br>
-                    <input type="text" placeholder="Email del usuario" id="form-mail" size="20" required>
-                    <br><br>
-                    <label for="nom"><b>Contraseña</b></label><!-- PILLAR PA EL LOGIN -->
+                    <label for="">CONSTRASEÑA: </label>
+                    <input type="password" name="" id="form-passwd" placeholder="CONSTRASEÑA">
                     <br>
-                    <input type="password" placeholder="Contraseña" id="form-passwd" size="20" required>
-                    <br><br>
-                    <button id="log-in" style="height:2em; width:14em">IDENTIFICARSE</button>
-                    <br><br>
+                    <div class="btn-log"><button id="btn-login" style="height:2em; width:21em" >IDENTIFICARSE</button></div>
+
                 </form>
             </div>
-            <a href="./registrar.html">
-                <div class="botoncin loggedOut">
-                    CREAR CUENTA
-                </div>
-            </a>
-            <a href="" id="log-out">
-                <div class="botoncinOut loggedIn">
-                    cerrar session
-                </div>
-            </a>
-    
-        </div>
 
-
-        <div class="subfooter">
-            <ul class="subFooterList">
-                <li><a href="">Aviso legal</a></li>
-                <li><a href="">Polítca de privacidad</a></li>
-                <li><a href=""><i class="fa-solid fa-copyright"></i> 2022 Alejandro Bonet</a></li>
-            </ul>
         </div>
 
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/9fbcafb666.js" crossorigin="anonymous"></script>
-    <script type="module" src="../js/logInOut.js"></script>
+    <script type="module" src="../js/darklog.js"></script>
 
 </body>
 

@@ -155,11 +155,11 @@ a:hover {
 }
 
 .darklog-btn li a{
-    color: rgb(53, 70, 78);
+    color: black;
 }
 
 .darklog-btn li a:hover{
-    color: rgb(19, 25, 27);
+    color: rgb(53, 70, 78);
 }
 
 .subfooter{
