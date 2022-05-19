@@ -35,27 +35,31 @@ export const loguear  = (mail,pswd)  =>
         .then((userCredential) => {
         // Signed in
         console.log('usuario logueado')
-        //const user = userCredential.user;
+        
+        const usua = getUser();
+        const user = userCredential.user;
+        console.log('usuario: ' + usua)
+        console.log('usuario: ' + user)
         });
 
 export const salir  = ()  =>
     signOut(auth).then(() => {
         // Sign-out successful.
-        console.log('')
+        console.log('saliendo')
     }).catch((error) => {
         // An error happened.
     });
 
-export const getUserPaciente  = ()  =>
+export const getUser = ()  =>
     onAuthStateChanged(auth, (user) => {
         if (user) {
             console.log('auth: usuario logueado')
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/firebase.User
-            const uid = user.uid;
-            db.collection('pacientes').getPaciente(uid);
-            
+            const uid = user.uid;            
             loginCheck(user)    
+            window.location.href="../htmlPaciente/index.html";
+
         
         } else {
         // User is signed out
@@ -66,7 +70,12 @@ export const getUserPaciente  = ()  =>
     }); 
 
 export const loginCheck = user => {
+    const loggedIn = document.querySelectorAll('.loggedIn')
+    const loggedOut = document.querySelectorAll('.loggedOut')
+
     if(user){
+        console.log('UserCheck: ' + user.nom)
+        
         loggedIn.forEach(link => link.style.display = 'block' );
         loggedOut.forEach(link => link.style.display = 'none' );
     }else{

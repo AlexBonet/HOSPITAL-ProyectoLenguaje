@@ -1,5 +1,7 @@
 FER ESPECIALIDADES 
 
+ORDENAR Y COMENTAR CODIGO
+
 Parte ADMIN (htmlsAdmin):
 - FALTA JS: CONSULTAS Y ESPECIALIDDES al complet
 
@@ -33,8 +35,14 @@ Atres coses:
 - avisar al paciente antes para recordarle la cita
 - falta en el pdf desde doctores:
 
+!!!!!!!!!!!!DARK LOGIN: TODO, te que tindre 3 forms uno per a cada tipo de trabajador
+fer en identificarse un algo que duga als treballadors a un login diferent que elegisque el tipo y si el log es correcto
+    puc utiliazrlo en un proyecto diferent que tinga els seus usuarios 
+        + lo bo es que tindria a tots separats
+        - lo mal tindria que cambiarho tot y pot acabar siguent contraproducent
+
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 PRIORITI LIST
 1º LOGIN___ com mire el tipo qe es la persona?
-2º mirar en #logInOut el if pa comprobar que el user funciona
-3º FER ESPECIALIDDES
+2º FER ESPECIALIDDES

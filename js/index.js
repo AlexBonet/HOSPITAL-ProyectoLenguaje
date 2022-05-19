@@ -30,8 +30,6 @@ window.addEventListener('DOMContentLoaded', async () => {
                 <p>${task.dni}</p>
                 <p>${task.fh}</p>
                 <p>${task.txt}</p>
-                <button class='btn-delete' data-id="${doc.id}">Borrar</button>
-                <button class='btn-edit' data-id="${doc.id}">Editar</button>
             </div>
         `;
     });

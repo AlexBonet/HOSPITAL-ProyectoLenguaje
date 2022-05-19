@@ -154,6 +154,14 @@ a:hover {
     margin-top: -70px;
 }
 
+.darklog-btn li a{
+    color: rgb(53, 70, 78);
+}
+
+.darklog-btn li a:hover{
+    color: rgb(19, 25, 27);
+}
+
 .subfooter{
     margin-top: 10px;
     margin-left:45%;
@@ -274,7 +282,7 @@ a:hover {
 /*IDENTIFICAR*/
 .iniciaSes{
     margin-top: 10px;
-    margin-bottom: 70px;
+    margin-bottom: 160px;
 }
 
 .galeriLog{
@@ -305,6 +313,7 @@ a:hover {
 }
 
 .botoncin{
+    display: none;
     position: relative;
     background-color: rgb(182, 213, 255);
     border-radius: 25px;

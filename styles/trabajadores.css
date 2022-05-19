@@ -147,7 +147,7 @@ a{
 
 /*visitas una a una resumidas, donde se ven las citas*/
 .cont-visitas{
-    overflow:scroll;
+    overflow-y:scroll;
     height:400px;
     width: 38.65%;
     float: right;
