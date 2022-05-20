@@ -140,3 +140,15 @@ export const onGetRecep = (callback) => onSnapshot(collection(db, 'recep'),callb
 export const getRecep = id => getDoc(doc(db,'recep', id));
 
 export const deleteRecep = id => deleteDoc(doc(db,'recep', id));
+
+/*ESPECIALIDADES*/
+export const saveEspecialidad = (especia,dr) => 
+    addDoc(collection(db, 'especialidad'),{especia,dr})
+
+export const updateEspecialidad = (id,newFields) => updateDoc(doc(db,"especialidad",id), newFields);
+
+export const onGetEspecialidad = (callback) => onSnapshot(collection(db, 'especialidad'),callback);
+
+export const getEspecialidad = id => getDoc(doc(db,'especialidad', id));
+
+export const deleteEspecialidad = id => deleteDoc(doc(db,'especialidad', id));

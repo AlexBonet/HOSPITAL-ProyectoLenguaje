@@ -1,4 +1,4 @@
-import { getTasks, onGetTasks,deleteTask, getTask, updateTasks } from './firebase.js';
+import { onGetTasks} from '../firebase.js';
 
 const container = document.getElementById('contenedor-citas');
 

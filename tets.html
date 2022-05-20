@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor-especilidad{
+            padding: 10px;
+            width:80%;
+            margin-left: 10%;
+            height: 100px;
+            margin-top: 10px;
+            background-color: rgb(52, 94, 52);
+            height: 100px;
+            width: 80%;
+            color: white;
+            border: 1px solid black;
+            margin-bottom:30px;
+        }
+        
+        .nom-esp{
+            width: 70%;
+        }
+        
+        .nom-esp-dr{
+            width: 70%;
+        }
+        .btn-editar{
+            margin-top: -40px;
+            margin-right:60px;
+            float: right;
+            width: 4%;
+        }
+        .btn-dlt{
+            margin-top: -80px;
+            margin-right:62px;
+            float: right;
+            width: 4%;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-especilidad">
+        <div class="nom-esp"><h2>Dr: <i>${task.especia}</h2></div>
+        <div class="nom-esp-dr"><h4>ESPECIALIDAD:  <i>${task.dr}</h4></div>
+        <div class="btn-editar"><button class='btn-edit' data-id="${docu.id}">Editar</button></div>
+        <div class="btn-dlt"><button class='btn-delete' data-id="${docu.id}">Borrar</button></div>
+    </div>   
+</body>
+</html>

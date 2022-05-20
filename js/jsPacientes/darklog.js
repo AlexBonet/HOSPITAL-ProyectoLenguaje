@@ -1,4 +1,4 @@
-import { loginCheck } from './firebase.js';
+import { loginCheck } from '../firebase.js';
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged 
         } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-auth.js"
 

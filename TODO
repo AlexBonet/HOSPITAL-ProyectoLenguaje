@@ -1,40 +1,36 @@
-FER ESPECIALIDADES 
-
 ORDENAR Y COMENTAR CODIGO
 
-Parte ADMIN (htmlsAdmin):
-- FALTA JS: CONSULTAS Y ESPECIALIDDES al complet
+FET SEGUR: PART Principal, 
 
-Parte Genereal(htmls):
-- #Especialidades (necesitem tindre especialidades del admin)
+
+Parte ADMIN (htmlsAdmin):
+- @gestion especialidades fer el doctor en spinner y juntar les bases de datos
+- FALTA JS: CONSULTAS  
 
 Parte Paciente (htmlsPaciente):
 - #MiCuenta fer que els camps se completen 
-- #Especialidades (necesitem tindre especialidades del admin)
-- que funcione el cerrar sesion?? o que porte al general o a identificarse
+- #Especialidades el btn porta a fer una consulta en camps ya trellenats
+- #PedirCita te que tindre pa buscar doctors y que pose la especialidad de ell
 
 Parte Doctor (htmlsDoctor)
 - #Principal fer, posar la consulta que te
 - #MiPerfil que funcione logout
-- #Consultas fer
 
 Parte recepcion (recepcion)
 - fer per complet
-- tindre un cerrar sesion y posar id="log-out" y importar el script en tots     <script type="module" src="../js/logInOut.js"></script> 
 
 Atres coses:
 - Comprobar contraseñes
 - enviar correu de confimacion al paciente
 - @doctor cambiar de contraseña
-- @trabajadores generar contraseña  8 dígitos al menos una mayúscula / minúscula / número / símbolo
+- @trabajadores generar contraseña  8 dígitos al menos una mayúscula / minúscula / número / símbolo :MI RESULTADO: SE LE ASIGNA contraseña 123456
 - asignar consultas automaticamente y controlar que no haya conflictos entre doctores y despachos
 - @paciente podra buscar por especialidad y doctors en #pedirCita
 - @paciente seleccionará hora disponible en #pedirCita
 - enviar correu en datos de reserva a @paciente
 - avisar al paciente antes para recordarle la cita
-- falta en el pdf desde doctores:
+- faltEN mes coses del pdf, desde doctores:
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 PRIORITI LIST
-2º FER ESPECIALIDDES

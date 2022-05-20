@@ -1,4 +1,4 @@
-import { logPaciente,autentifiacar } from './firebase.js';
+import { logPaciente,autentifiacar } from '../firebase.js';
 
 const form = document.getElementById('log-form')
 
