@@ -57,19 +57,19 @@
             <div class="pedidor-citas">
                 <form action="" id="cita-form">
                     <label for="nombre">Nombre: </label>
-                    <input type="text" placeholder="Inserte su nombre" id="nom-pc" maxlength="25">
+                    <input type="text" placeholder="Inserte su nombre" id="nom-c" maxlength="25">
                     <br><br>
-                    <label for="apellidos">Apelldios: </label>
-                    <input type="text" placeholder="Inserte sus apellidos" id="ape-pc" maxlength="25">
+                    <label for="apellidos">Doctor: </label>
+                    <input type="text" placeholder="Inserte nomnbre del Doctor" id="dcr-c" maxlength="25">
                     <br><br>
-                    <label for="dni">DNI: </label>
-                    <input type="text" placeholder="Inserte su DNI" id="dni-pc" maxlength="25">
+                    <label for="dni">Especialidad: </label>
+                    <input type="text" placeholder="Inserte la Especialidad" id="esp-c" maxlength="25">
                     <br><br>
-                    <label for="fecha-hora">Fecha y hota de la cita:</label>
-                    <input type="datetime" placeholder="Inserte fecha y hora" id="fh-pc" maxlength="25">
+                    <label for="fecha-hora">Dia de la cita:</label>
+                    <input type="date" id="fec-c" maxlength="25">
                     <br><br>
-                    <label for="descripcion">Describe que le ocurre:</label>
-                    <input type="text" placeholder="Inserte una  descripción" id="txt-pc" maxlength="25">
+                    <label for="fecha-hora">Hora de la cita:</label>
+                    <input type="time" id="hor-c" maxlength="25">
                     <br><br>
                     <button id="btn-pc">Pedir Cita</button>
                 </form>
@@ -102,6 +102,5 @@
     
 </body>
 <script src="https://kit.fontawesome.com/9fbcafb666.js" crossorigin="anonymous"></script>
-<script type="module" src="../js/index.js"></script>    
-<script type="module" src="../js/logInOut.js"></script>
+<script type="module" src="../js/jsPacientes/crearCita.js"></script>    
 </html>

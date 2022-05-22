@@ -1,4 +1,4 @@
-import { onGetTasks} from '../firebase.js';
+import {onGetTasks} from '../firebase.js';
 
 const container = document.getElementById('contenedor-citas');
 
@@ -15,14 +15,15 @@ window.addEventListener('DOMContentLoaded', async () => {
                 background-color: rgb(58, 197, 181);
                 width: 100%;
                 text-align: center;
-                color:black;
+                color:black
             }
             </style>
             <div class="myDiv">
                 <p>Nombre: ${task.nom}</p>
-                <p>FECHA Y HORA: ${task.fh}</p>
-                <p>Doctor: ${task.doc}</p>
-                <p>Consulta: ${task.con}</p>
+                <p>FECHA Y HORA: ${task.fec}, ${task.hor} </p>
+                <p>Doctor: ${task.dcr}</p>
+                <p>Especialidad: ${task.esp}</p>
+
             </div>
         `;
     });
@@ -30,5 +31,8 @@ window.addEventListener('DOMContentLoaded', async () => {
     container.innerHTML = html ;
 
     });
+
+    
+
     
 })

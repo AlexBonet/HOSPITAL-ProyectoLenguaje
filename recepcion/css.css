@@ -1,7 +1,7 @@
 body{
     font-family: 'Montserrat', sans-serif;
     width: 80%;
-    margin-left: 10%;
+    margin-left: 9%;
 }
 
 ul{
@@ -35,3 +35,31 @@ li a{
     
 }
 
+.pacientesEspera{
+    border: 2px solid red;
+    width: 76%;
+    height: 820px;
+    margin-top: 20px;
+    overflow-y:scroll;
+    padding: 10px;
+
+
+}
+
+.dato{
+    display: inline-block;
+    width: 19%;
+    background-color: red;
+
+}
+
+/*Citas*/
+.listaCitas{
+    overflow-y:scroll;
+    height:820px;
+    padding: 10px;
+    margin-top: -844px;
+    float: right;
+    border: 2px solid red;
+    width: 20%;
+}

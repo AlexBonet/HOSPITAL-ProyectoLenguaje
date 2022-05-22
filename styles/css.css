@@ -285,43 +285,35 @@ a:hover {
     margin-left: 35%;
     height: 100px;
 }
-/*
-.contenedor-especilidad{
-    padding: 10px;
-    width: 97.5%;
-    background-color: rgb(182, 213, 255);;
-    height: 100px;
-    border: 3px solid rgb(99, 71, 155);
-    margin-top: 10px;
+
+/*RELOJ*/
+.reloj{
+    background-color: black;
+    color: white;
+    width: 40%;
 }
 
-.nom-esp{
-    width: 70%;
-}
-
-.nom-esp-dr{
-    width: 70%;
-}
-
-.btn-esp-go{
+.reloj p{
     display: inline-block;
-    width: 20%;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    border: 2px solid rgb(99, 71, 155);
-    float: right;
-    margin-top: -85px;
-    font-size: large;
+    line-height: 1em;
 }
 
-.btn-esp-go:hover{
-    background-color: rgb(99, 71, 155);
-    border: 2px solid rgb(99, 71, 155);
-    color: rgb(209, 240, 255);
-    
-}*/
+.fecha{
+    text-align: center;
+    font-size: larger;
+    margin-bottom: 5px;
+    padding: 20px;
+    width: 100%;
+}
 
+.hora{
+    width: 90%;
+    padding: 20px;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    background-color: aquamarine;
+}
 
 
 /*IDENTIFICAR*/

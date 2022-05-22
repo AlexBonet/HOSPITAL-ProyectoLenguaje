@@ -1,8 +1,5 @@
 ORDENAR Y COMENTAR CODIGO
 
-FET SEGUR: PART Principal, 
-
-
 Parte ADMIN (htmlsAdmin):
 - @gestion especialidades fer el doctor en spinner y juntar les bases de datos
 - FALTA JS: CONSULTAS  
@@ -17,7 +14,8 @@ Parte Doctor (htmlsDoctor)
 - #MiPerfil que funcione logout
 
 Parte recepcion (recepcion)
-- fer per complet
+- fer per complet 
+??que fa un recepcionista
 
 Atres coses:
 - Comprobar contraseñes
@@ -29,8 +27,10 @@ Atres coses:
 - @paciente seleccionará hora disponible en #pedirCita
 - enviar correu en datos de reserva a @paciente
 - avisar al paciente antes para recordarle la cita
-- faltEN mes coses del pdf, desde doctores:
-
+- @doctor te listado en consultas del dia
+- @doctor te pantalla anota cada visita
+- monitor en lista espera, y reloj
+- @doctor termina la tarea y la marca como terminada
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 PRIORITI LIST

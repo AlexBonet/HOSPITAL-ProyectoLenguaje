@@ -23,10 +23,24 @@
     </div>
 
     <div class="contenido">
-        <p>un div en els pacientes que estan en espera y un altre en las citas que hi ha per ahí o posar les consultes que hiha a modo de informacion</p>
+        <div class="pacientesEspera" id="contenedor-pacientes">
+            <div class="paciente-espera">
+                <div class="dato">NOM</div>
+                <div class="dato">APELLIDOS</div>
+                <div class="dato">TELEFONO</div>
+                <div class="dato">EMAIL</div>
+                <div class="dato"><button>Aceptar</button> <button>Denegar</button></div>
+            </div>
+        </div>
+
+        <div class="listaCitas" id="contenedor-citas">
+
+        </div>
 
     </div>
     
 </body>
 <script type="module" src="../js/logInOut.js"></script>
+<script type="module" src="../js/jsPacientes/listaCitas.js"></script>
+
 </html>

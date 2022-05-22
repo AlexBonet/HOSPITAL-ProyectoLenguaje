@@ -73,7 +73,7 @@ const loguear  = (mail,pswd, nuum)  =>
                     window.location.href="../htmlsAdmin/index.html";
 
             }else if(nuum==2){
-                    window.location.href="../htmlsDoctor/indexDr.html";
+                    window.location.href="../htmlsDoctor/visitasDr.html";
 
             }else if(nuum==3){
                     window.location.href="../recepcion/recepcionista.html";

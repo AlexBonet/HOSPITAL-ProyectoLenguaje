@@ -9,16 +9,16 @@ let id = '';
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    const nom = form['nom-gp'];
-    const doc = form['doc-gp'];
-    const esp = form['esp-gp'];
-    const con = form['con-gp'];
-    const fh = form['fh-gp'];
+    const nom = form['nom-c'];
+    const dcr = form['dcr-c'];
+    const esp = form['esp-c'];
+    const fec = form['fec-c'];
+    const hor = form['hor-c'];
 
     if(!editStatus){
-        saveCitaGest(nom.value ,esp.value ,doc.value ,fh.value ,con.value );
+        saveCitaGest(nom.value ,esp.value ,dcr.value ,fec.value ,hor.value );
     }else{
-        updateTasks(id,{nom:nom.value ,esp:esp.value ,doc:doc.value ,fh:fh.value ,con:con.value});
+        updateTasks(id,{nom:nom.value ,esp:esp.value ,dcr:dcr.value ,fec:fec.value ,hor:hor.value});
         editStatus = false;
     }
        
@@ -44,23 +44,24 @@ window.addEventListener('DOMContentLoaded', async () => {
                     margin-bottom:30px;
                 }
                 .nom{
-                    margin-left: 15px;
-                    width: 30%;
+                    margin-top:35px;
+                    margin-left: 25px;
+                    width: 33%;
                 }
                 .doc{
-                    margin-left: 15px;
-                    margin-top:-10px;
-                    width: 20%;
+                    margin-top:-75px;
+                    margin-left: 35%;
+                    width: 28%;
                 }
                 .esp{
-                    margin-left: 21%;
-                    margin-top: -40px;
-                    width: 20%;
+                    margin-left: 35%;
+                    width: 28%;
+
                 }
                 .fyh{
                     margin-top: -60px;
-                    margin-left: 42%;
-                    width: 23%;
+                    margin-left: 65%;
+                    width: 25%;
                 }
                 .btn-editar{
                     margin-top: -20px;
@@ -74,20 +75,14 @@ window.addEventListener('DOMContentLoaded', async () => {
                     float: right;
                     width: 4%;
                 }
-                .con{
-                    width: 20%;
-                    margin-left: 67%;
-                    margin-top: -42.5px;
-                }
             </style>
             <div class="view">
-                <div class="nom"><h2>Sr/a.: <i>${task.nom}</i></h2></div>
-                <div class="doc"><h3>Dr/a.: <i>${task.doc}</i></h3></div>
+                <div class="nom"><h1>Sr/a.: <i>${task.nom}</i></h1></div>
+                <div class="doc"><h3>Dr/a.: <i>${task.dcr}</i></h3></div>
                 <div class="esp"><p><i>${task.esp}</i></p></div>
-                <div class="fyh"><h3>Fecha y Hora: <i> ${task.fh}</i></h3></div>    
+                <div class="fyh"><h3>Fecha y Hora: <i> ${task.fec} , ${task.hor}</i></h3></div>    
                 <div class="btn-editar"><button class='btn-edit' data-id="${docu.id}">Editar</button></div>
                 <div class="btn-dlt"><button class='btn-delete' data-id="${docu.id}">Borrar</button></div>
-                <div class="con"><h3>Consulta: <i> ${task.con}</i></h3></div>
             </div>
             
             
@@ -109,11 +104,11 @@ window.addEventListener('DOMContentLoaded', async () => {
             const docu = await getTask(dataset.id)
             const task = docu.data()
 
-            form['nom-gp'].value = task.nom;
-            form['doc-gp'].value = task.doc;
-            form['esp-gp'].value = task.esp;
-            form['con-gp'].value = task.con;
-            form['fh-gp'].value = task.fh;
+            form['nom-c'].value = task.nom;
+            form['dcr-c'].value = task.dcr;
+            form['esp-c'].value = task.esp;
+            form['fec-c'].value = task.fec;
+            form['hor-c'].value = task.hor;
            
             editStatus = true;
             id = docu.id;

@@ -87,11 +87,8 @@ export const loginCheck = user => {
 
 
 /*CITAS*/
-export const saveF = (nom,ape,dni,fh,txt) => //borrar?
-    addDoc(collection(db, 'citas'),{nom ,ape ,dni ,fh ,txt})
-
-export const saveCitaGest = (nom,esp,doc,fh,con) => 
-    addDoc(collection(db, 'citas'),{nom ,esp ,doc ,fh,con})
+export const saveCitaGest = (nom,esp,dcr,fec,hor) => 
+    addDoc(collection(db, 'citas'),{nom ,esp ,dcr ,fec,hor})
 
 export const getTasks = () => getDocs(collection(db, 'citas'));
 
