@@ -5,13 +5,13 @@ Parte ADMIN (htmlsAdmin):
 - FALTA JS: CONSULTAS  
 
 Parte Paciente (htmlsPaciente):
-- #MiCuenta fer que els camps se completen 
+- 
 - #Especialidades el btn porta a fer una consulta en camps ya trellenats
 - #PedirCita te que tindre pa buscar doctors y que pose la especialidad de ell
 
 Parte Doctor (htmlsDoctor)
 - #Principal fer, posar la consulta que te
-- #MiPerfil que funcione logout
+- buscar un puesto per a que cambie la contraseña
 
 Parte recepcion (recepcion)
 - fer per complet 
@@ -35,7 +35,7 @@ Atres coses:
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 PRIORITI LIST
 1º 
-2º Rellenar campos de #MiCuenta
+2º 
 3º Enviar Correo de verificacion y de reserva
 4º Relacion doctor especialidad
 5º Botons de cerrar sesion y separar de login

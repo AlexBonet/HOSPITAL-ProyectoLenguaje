@@ -85,6 +85,18 @@ export const loginCheck = user => {
 
 }
 
+export const obtenerCorreos = ()  =>
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        console.log('auth: usuario logueado ' + user.email)
+        const uid = user.uid;            
+    
+    } else {
+    // User is signed out
+        console.log('auth: no hay usuario logueado')
+    
+    }
+}); 
 
 /*CITAS*/
 export const saveCitaGest = (nom,esp,dcr,fec,hor) => 

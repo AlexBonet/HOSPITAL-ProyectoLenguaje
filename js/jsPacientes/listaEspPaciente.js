@@ -50,7 +50,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             <div class="contenedor-especilidad">
                 <div class="nom-esp"><h2>Dr: <i>${task.especia}</h2></div>
                 <div class="nom-esp-dr"><h4>ESPECIALIDAD:  <i>${task.dr}</h4></div>
-                <a href=""><div class="btn-esp-go"><b>Pedir cita</b></div></a>
+                <a href="./pedirCitaPacienete.html"><div class="btn-esp-go"><b>Pedir cita</b></div></a>
             </div>
         `;
     });
