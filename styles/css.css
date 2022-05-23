@@ -127,9 +127,14 @@ a:hover {
     border: 5px ridge rgb(111, 58, 197);
     color: rgb(111, 58, 197);
     width: 30%;
-    margin-left:70%;
+    margin-top: -214.54px;
+    height: 700px;
+    float: right;
+    margin-right: 120px;
     display: inline-block;
     text-align: center;
+    overflow-y: scroll;
+
 }
 
 .footer{
@@ -288,9 +293,11 @@ a:hover {
 
 /*RELOJ*/
 .reloj{
-    background-color: black;
-    color: white;
+    color: rgb(111, 58, 197);
     width: 40%;
+    margin-left: 120px;
+    border: 5px ridge rgb(111, 58, 197);
+
 }
 
 .reloj p{
@@ -302,19 +309,36 @@ a:hover {
     text-align: center;
     font-size: larger;
     margin-bottom: 5px;
-    padding: 20px;
     width: 100%;
 }
 
 .hora{
-    width: 90%;
-    padding: 20px;
-    font-size: 3em;
+    width: 100%;
+    font-size: 4em;
     font-weight: bold;
     text-align: center;
-    background-color: aquamarine;
+    margin-top: -50px;
 }
 
+
+/*INDEX*/
+.index-con{
+    margin-left: 35%;
+    height: 720px;
+    width: 100%;
+}
+
+.consultas{
+    border: 5px ridge rgb(111, 58, 197);
+    width: 40%;
+    margin-left: 120px;
+    margin-top: 40px;
+    overflow-y: scroll;
+    height: 445px;
+    text-align: center;
+    color: rgb(111, 58, 197);
+
+}
 
 /*IDENTIFICAR*/
 .iniciaSes{

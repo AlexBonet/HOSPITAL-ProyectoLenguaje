@@ -1,28 +1,21 @@
-(function(){
-    var actualizarHora = function(){
-        var fecha = new Date(),
-            horas = fecha.getHours(), minutos = fecha.getMinutes(), segundos = fecha.getSeconds(),
-            diaSemana = fecha.getDay(), dia = fecha.getDate(), mes = fecha.getMonth(), year = fecha.getFullYear();
+setInterval(() => { //Ejecutar fecha cada segundo
+    let fecha = new Date();
+    const meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+    const dias = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+    const year = fecha.getFullYear();
+    const mes = meses[fecha.getMonth()];
+    const dia = dias[fecha.getDay()];
+    const diaN = fecha.getDate();
+    const horas = (String(fecha.getHours()).length == 2) ? fecha.getHours() : `0${fecha.getHours()}`;
+    const minutos = (String(fecha.getMinutes()).length == 2) ? fecha.getMinutes() : `0${fecha.getMinutes()}`;
+    const segundos = (String(fecha.getSeconds()).length == 2) ? fecha.getSeconds() : `0${fecha.getSeconds()}`;
 
-        var pHoras = document.getElementById('horas'), pMinutos = document.getElementById('minutos'), pSegundos = document.getElementById('segundos'),
-        pDiaSemana = document.getElementById('diaSemana'), pDia = document.getElementById('dia'), pMes = document.getElementById('mes'), pYear = document.getElementById('year');
-
-        var semana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
-        pDiaSemana.textContent = semana[diaSemana];
-
-        pDia.textContent = dia;
-
-        var meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre',]
-        pMes.textContent = meses[mes];
-
-        pYear.textContent = year;
-
-        pHoras.textContent = horas;
-        pMinutos.textContent = minutos;
-        pSegundos.textContent = segundos;
-
-    };
-
-    actualizarHora();
-    var intervalo = setInterval(actualizarHora, 1000);
-})
+    //Mostrando fecha
+    document.getElementById('year').innerHTML = year
+    document.getElementById('mes').innerHTML = mes
+    document.getElementById('dia').innerHTML = diaN;
+    document.getElementById('diaSemana').innerHTML = dia;
+    document.getElementById('horas').innerHTML = horas;
+    document.getElementById('minutos').innerHTML = minutos;
+    document.getElementById('segundos').innerHTML = segundos;
+}, 1000);
