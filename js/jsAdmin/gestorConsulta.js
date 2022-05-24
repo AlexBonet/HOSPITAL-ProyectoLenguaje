@@ -1,7 +1,7 @@
-import { saveEspecialidad, onGetEspecialidad,deleteEspecialidad, getEspecialidad, updateEspecialidad } from '../firebase.js';
+import { saveConsulta, onGetConsulta,deleteConsulta, getConsulta, updateConsulta } from '../firebase.js';
 
 const form = document.getElementById('log-form');
-const container = document.getElementById('contenedor-esp');
+const container = document.getElementById('contenedor-cons');
 
 let editStatus = false;
 let id = '';
@@ -9,23 +9,23 @@ let id = '';
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    const especia = form['form-especialidad'].value;
+    const num = form['form-num'].value;
     const dr = form['form-dr'].value;
     
     if(!editStatus){
-        saveEspecialidad(especia ,dr);
+        saveConsulta(num ,dr);
         console.log("save")    
     }else{
-        updateEspecialidad(id,{especia ,dr});
+        updateConsulta(id,{num ,dr});
         editStatus = false;
     }
     console.log("click")
     form.reset()
-    form['btn-register'].innerText = 'CREAR ESPECIALIDAD';
+    form['btn-register'].innerText = 'CREAR CONSULTA';
 })
 
 window.addEventListener('DOMContentLoaded', async () => {
-    onGetEspecialidad((querySnapshot) => {
+    onGetConsulta((querySnapshot) => {
     let html ="";
 
     querySnapshot.forEach((docu) => {
@@ -69,8 +69,8 @@ window.addEventListener('DOMContentLoaded', async () => {
                 }
             </style>
             <div class="contenedor-especilidad">
-                <div class="nom-esp"><h2>ESPECIALIDAD: <i>${task.especia}</h2></div>
-                <div class="nom-esp-dr"><h4>Dr :  <i>${task.dr}</h4></div>
+                <div class="nom-esp"><h2>Consulta numero: <i>${task.num}</h2></div>
+                <div class="nom-esp-dr"><h4>Doctor:  <i>${task.dr}</h4></div>
                 <div class="btn-editar"><button class='btn-edit' data-id="${docu.id}">Editar</button></div>
                 <div class="btn-dlt"><button class='btn-delete' data-id="${docu.id}">Borrar</button></div>
             </div>
@@ -83,23 +83,23 @@ window.addEventListener('DOMContentLoaded', async () => {
     const btnsDelete = container.querySelectorAll('.btn-delete')
     btnsDelete.forEach(btn => {
         btn.addEventListener('click',({target: {dataset}}) => {
-            deleteEspecialidad(dataset.id)
+            deleteConsulta(dataset.id)
         })
     })
 
     const btnsEdit = container.querySelectorAll('.btn-edit')
     btnsEdit.forEach(btn => {
         btn.addEventListener('click',async ({target: {dataset}}) => {
-            const docu = await getEspecialidad(dataset.id)
+            const docu = await getConsulta(dataset.id)
             const task = docu.data()
 
-            form['form-especialidad'].value = task.especia;
+            form['form-num'].value = task.num;
             form['form-dr'].value = task.dr;
            
             editStatus = true;
             id = docu.id;
 
-            form['btn-register'].innerText = 'ACTUALIZAR ESPECIALIDAD';
+            form['btn-register'].innerText = 'ACTUALIZAR CONSULTA';
         })
     })
 

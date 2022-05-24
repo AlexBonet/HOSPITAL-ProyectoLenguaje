@@ -161,3 +161,15 @@ export const onGetEspecialidad = (callback) => onSnapshot(collection(db, 'especi
 export const getEspecialidad = id => getDoc(doc(db,'especialidad', id));
 
 export const deleteEspecialidad = id => deleteDoc(doc(db,'especialidad', id));
+
+/*CONSULTAS*/
+export const saveConsulta = (num,dr) => 
+    addDoc(collection(db, 'consulta'),{num,dr})
+
+export const updateConsulta = (id,newFields) => updateDoc(doc(db,"consulta",id), newFields);
+
+export const onGetConsulta = (callback) => onSnapshot(collection(db, 'consulta'),callback);
+
+export const getConsulta = id => getDoc(doc(db,'consulta', id));
+
+export const deleteConsulta = id => deleteDoc(doc(db,'consulta', id));

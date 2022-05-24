@@ -18,15 +18,15 @@ Parte recepcion (recepcion)
 ??que fa un recepcionista
 
 Atres coses:
-- Comprobar contraseñes
+-: Comprobar contraseñes :MI RESULTADO: no comprobem les contraseñes per anar més rapid
 - enviar correu de confimacion al paciente
 - @doctor cambiar de contraseña
-- @trabajadores generar contraseña  8 dígitos al menos una mayúscula / minúscula / número / símbolo :MI RESULTADO: SE LE ASIGNA contraseña 123456
+-: @trabajadores generar contraseña  8 dígitos al menos una mayúscula / minúscula / número / símbolo :MI RESULTADO: SE LE ASIGNA contraseña 123456
 - asignar consultas automaticamente y controlar que no haya conflictos entre doctores y despachos
 - @paciente podra buscar por especialidad y doctors en #pedirCita
 - @paciente seleccionará hora disponible en #pedirCita
 - enviar correu en datos de reserva a @paciente
-- avisar al paciente antes para recordarle la cita
+-: avisar al paciente antes para recordarle la cita :RESULTADO: no se pot
 - @doctor te listado en consultas del dia
 - @doctor te pantalla anota cada visita
 - monitor en lista espera, y reloj
