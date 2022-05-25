@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-app.js";
-import { getFirestore, collection, addDoc, getDocs, onSnapshot, deleteDoc, doc, getDoc, updateDoc
+import { getFirestore, collection, addDoc, getDocs, onSnapshot, deleteDoc, doc, getDoc, updateDoc,
+        query, where, getDatabase, ref, push, set
         } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-firestore.js"
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged 
         } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-auth.js"
@@ -173,3 +174,31 @@ export const onGetConsulta = (callback) => onSnapshot(collection(db, 'consulta')
 export const getConsulta = id => getDoc(doc(db,'consulta', id));
 
 export const deleteConsulta = id => deleteDoc(doc(db,'consulta', id));
+
+/*QUERY*/
+/*
+q = query(collection(db, tabl), orderBy("id", "desc"), limit(1) );
+
+export const getWithQ = (callback) => {
+    onSnapshot(q, callback);
+}
+
+getWithQ((snapshot) => {
+    snapshot.docs.forEach((doc) => {
+      usu = doc.data();
+    })
+})
+
+getNombreDoctores = (callback) => {
+    onSnapshot(query(collection(db,'doctores')), callback);
+}*/
+
+const dba = getDatabase();
+const postListRef = ref(dba, 'doctores');
+const newPostRef = push(postListRef);
+set(newPostRef, {
+    
+});
+
+export const getAlgo = ()  => postListRef;
+export const getAlgo2 = ()  => newPostRef;

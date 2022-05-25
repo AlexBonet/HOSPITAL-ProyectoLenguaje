@@ -70,7 +70,11 @@ window.addEventListener('DOMContentLoaded', async () => {
             </style>
             <div class="contenedor-especilidad">
                 <div class="nom-esp"><h2>ESPECIALIDAD: <i>${task.especia}</h2></div>
-                <div class="nom-esp-dr"><h4>Dr :  <i>${task.dr}</h4></div>
+                <div class="nom-esp-dr">
+                    <h4>Dr :  
+                        <i>${task.dr}
+                    </h4>
+                </div>
                 <div class="btn-editar"><button class='btn-edit' data-id="${docu.id}">Editar</button></div>
                 <div class="btn-dlt"><button class='btn-delete' data-id="${docu.id}">Borrar</button></div>
             </div>
