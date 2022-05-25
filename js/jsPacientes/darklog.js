@@ -70,16 +70,24 @@ const loguear  = (mail,pswd, nuum)  =>
             const uid = user.uid;   
                 
             if(nuum==1){
-                    window.location.href="../htmlsAdmin/index.html";
+                    //window.location.href="../htmlsAdmin/index.html";
+                    console.log("usuario? " + loginCheck());
+
 
             }else if(nuum==2){
-                    window.location.href="../htmlsDoctor/visitasDr.html";
+                    //window.location.href="../htmlsDoctor/visitasDr.html";
+                    console.log("usuario? " + loginCheck());
+
 
             }else if(nuum==3){
-                    window.location.href="../recepcion/recepcionista.html";
+                    //window.location.href="../recepcion/recepcionista.html";
+                    console.log("usuario? " + loginCheck());
+
 
             }else{
                     console.log("no tenemos tipo");
+                    console.log("usuario? " + loginCheck());
+
             }
             
         }; 

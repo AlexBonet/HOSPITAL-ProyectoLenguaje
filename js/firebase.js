@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-app.js";
 import { getFirestore, collection, addDoc, getDocs, onSnapshot, deleteDoc, doc, getDoc, updateDoc,
-        query, where, getDatabase, ref, push, set
+        query, where
         } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-firestore.js"
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged 
         } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-auth.js"
@@ -36,11 +36,7 @@ export const loguear  = (mail,pswd)  =>
         .then((userCredential) => {
         // Signed in
         console.log('usuario logueado')
-        
         const usua = getUser();
-        const user = userCredential.user;
-        console.log('usuario: ' + usua)
-        console.log('usuario: ' + user)
         });
 
 export const salir  = ()  =>
@@ -54,13 +50,12 @@ export const salir  = ()  =>
 export const getUser = ()  =>
     onAuthStateChanged(auth, (user) => {
         if (user) {
-            console.log('auth: usuario logueado')
+            console.log('auth: usuario logueado ' + user.email)//esto pilla el user
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/firebase.User
             const uid = user.uid;            
             loginCheck(user)    
-            window.location.href="../htmlPaciente/index.html";
-
+            //window.location.href="../htmlPaciente/index.html";
         
         } else {
         // User is signed out
@@ -75,7 +70,7 @@ export const loginCheck = user => {
     const loggedOut = document.querySelectorAll('.loggedOut')
 
     if(user){
-        console.log('UserCheck: ' + user.nom)
+        console.log('UserCheck: ' + user.email)
         
         loggedIn.forEach(link => link.style.display = 'block' );
         loggedOut.forEach(link => link.style.display = 'none' );
@@ -192,13 +187,3 @@ getWithQ((snapshot) => {
 getNombreDoctores = (callback) => {
     onSnapshot(query(collection(db,'doctores')), callback);
 }*/
-
-const dba = getDatabase();
-const postListRef = ref(dba, 'doctores');
-const newPostRef = push(postListRef);
-set(newPostRef, {
-    
-});
-
-export const getAlgo = ()  => postListRef;
-export const getAlgo2 = ()  => newPostRef;
