@@ -204,15 +204,17 @@ a{
 .cuentaDetalls{
     background-color: rgb(58, 197, 181);
     width: 30%;
-    margin-left: 35%;
+    margin-left: 15%;
     padding: 10px;
     border: 2px solid #c53a4a;
 }
 
 .btn-cerrarS{
-    width: 20%;
-    margin-left: 40%;
-    margin-top: 50px;
+    width: 30%;
+    margin-left: 35%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 80px;
     height: 80px;
     color: black;
     text-align: center;

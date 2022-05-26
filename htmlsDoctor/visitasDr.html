@@ -9,17 +9,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-    <title>PÁGINA PRINCIPAL - DOCTORES</title>
+    <title>VISITAS DOCTORES</title>
 </head>
 <body>
     <div class="main-content">
         <div class="navPanel">
             <div class="loguito">
-                <a href="./indexDr.html"><img src="../i/loguito.png" alt="Loguito"></a>
+                <a href=""><img src="../i/loguito.png" alt="Loguito"></a>
             </div>
             <div class="menu">
                 <ul class="menul">
-                    <li><div class="cajaMenu"><a href="./miCuentaDr.html">Mi Perfil</a></div>
+                    <li><div class="cajaMenu"><a href="./miCuentaDr.html">Cuenta</a></div>
                         <ul>
                             <li><div class="cajaMenu log-out"><a href="../htmls/index.html">Cerrar Sesión</a></div></li>
                         </ul>
@@ -45,7 +45,7 @@
                             <input type="text" placeholder="INFORMACION DE LA CITA" id="cit-n" size="30">
                             <br><br>
                             <label for="">Fecha: </label>
-                            <input type="text" placeholder="FECHA DE LA CITA" id="fex-n">
+                            <input type="date" placeholder="FECHA DE LA CITA" id="fec-n" min="2022-05-27" max="2022-12-21">
                         </div>
                         <div class="cajaNota">
                             <label for="">Notas: </label><br>
@@ -53,12 +53,12 @@
                         </div>
                         
                         <br>
-                        <button class="btn-notas">boton</button>
+                        <button class="btn-notas" id="log-form">boton</button>
                     </form>
                 </div>
                 
                 <div class="cont-visitas" >
-                    <div class="visita">
+                    <!--div class="visita">
                         <div class="cita-n">ID DE CITA O RESUM</div>
                         <div class="fech-n">FECHA: <i>12-22-2022</i></div>
                         <div class="edit-n"><button>EDITAR</button></div>
@@ -91,7 +91,7 @@
                         <div class="edit-n"><button>EDITAR</button></div>
                         <div class="info-n">PACIENTE: <i>NOmbre y los dos apellidos del paciente</i></div>
                         <div class="dlte-n"><button>BORRAR</button></div>
-                    </div>
+                    </div-->
                     
                     
                 </div>
@@ -104,5 +104,5 @@
     </div>
     
 </body>
-<script type="module" src="../js/logInOut.js"></script>
+<script type="module" src="./visitas.js"></script>
 </html>

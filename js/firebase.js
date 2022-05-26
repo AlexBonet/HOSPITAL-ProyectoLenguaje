@@ -43,6 +43,7 @@ export const salir  = ()  =>
     signOut(auth).then(() => {
         // Sign-out successful.
         console.log('saliendo')
+        window.location.href="../htmls/index.html"
     }).catch((error) => {
         // An error happened.
     });
@@ -169,6 +170,18 @@ export const onGetConsulta = (callback) => onSnapshot(collection(db, 'consulta')
 export const getConsulta = id => getDoc(doc(db,'consulta', id));
 
 export const deleteConsulta = id => deleteDoc(doc(db,'consulta', id));
+
+/*Vvisita*/
+export const saveVisita = (nom,ape,cita,fec,nota) => 
+    addDoc(collection(db, 'visita'),{nom,ape,cita,fec,nota})
+
+export const updateVisita = (id,newFields) => updateDoc(doc(db,"visita",id), newFields);
+
+export const onGetVisita = (callback) => onSnapshot(collection(db, 'visita'),callback);
+
+export const getVisita = id => getDoc(doc(db,'visita', id));
+
+export const deleteVisita = id => deleteDoc(doc(db,'visita', id));
 
 /*QUERY*/
 /*

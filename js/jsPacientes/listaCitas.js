@@ -64,8 +64,6 @@ window.addEventListener('DOMContentLoaded', async () => {
                     margin-top:-20px;
                     height:40px;
                     line-height:40px;
-                    
-
                 }
 
                 .nom-esp-dr{
