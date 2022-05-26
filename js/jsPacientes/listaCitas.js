@@ -59,7 +59,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                 }
 
                 .nom-esp{
-                    width: 40%;
+                    width: 30%;
                     display: inline-block;
                     margin-top:-20px;
                     height:40px;
@@ -69,15 +69,14 @@ window.addEventListener('DOMContentLoaded', async () => {
                 }
 
                 .nom-esp-dr{
-                    width: 40%;
+                    width: 68%;
                     display: inline-block;
-
                 }
 
             </style>
             <div class="contenedor-especilidad">
-                <div class="nom-esp"><h3>Puerta: <i>${task.num}</h3></div>
-                <div class="nom-esp-dr"><h3>Dr:  <i>${task.dr}</h3></div>
+                <div class="nom-esp"><h3>Puerta: <i>${task.num}</i></h3></div>
+                <div class="nom-esp-dr"><h3>Dr:  <i>${task.dr}</i></h3></div>
             </div>
         `;
     });
