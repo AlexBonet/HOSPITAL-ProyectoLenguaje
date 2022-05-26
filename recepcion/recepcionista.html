@@ -15,9 +15,28 @@
         <div class="loguito">
             <a href="./recepcionista.html"><img src="../i/loguito.png" alt="Loguito"></a>
         </div>
+
+        <!--RELOJ-->
+        <div class="fecha">
+            <p id="diaSemana" class="diaSemana"></p>
+            <p id="dia" class="dia"></p>
+            <p>de </p>
+            <p id="mes" class="mes"></p>
+            <p>de </p>
+            <p id="year" class="year"></p>
+        </div>
+        <div class="hora">
+            <p id="horas" class="horas"></p>
+            <p>:</p>
+            <p id="minutos" class="minutos"></p>
+            <p>:</p>
+            <p id="segundos" class="segundos"></p>
+        </div>   
+        
+        <!--CAJAS MENU-->
         <div class="menu">
             <ul class="menul">
-                <li><div class="cajaMenu log-out"><a href="../htmls/index.html">Cerrar Sesión</a></div></li>
+                <a href="../htmls/index.html"><li><div class="cajaMenu log-out">Cerrar Sesión</div></li></a>
             </ul>
         </div>
     </div>
@@ -42,5 +61,6 @@
 </body>
 <script type="module" src="../js/logInOut.js"></script>
 <script type="module" src="../js/jsPacientes/listaCitas.js"></script>
+<script src="../js/reloj.js"></script>
 
 </html>

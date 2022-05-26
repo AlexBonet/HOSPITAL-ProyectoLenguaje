@@ -4,6 +4,12 @@ body{
     margin-left: 9%;
 }
 
+a{
+    color: black;
+    text-decoration: none;
+
+}
+
 ul{
     list-style-type: none;
 }
@@ -11,6 +17,10 @@ ul{
 li a{
     text-decoration: none;
     color: black;
+}
+
+.loguito{
+    margin-left: 10px;
 }
 
 .loguito img{
@@ -23,22 +33,38 @@ li a{
 
 .navPanel{
     border: 2px solid red;
+    height: 80px;
 }
 
 .menu{
     display: inline-block;
     width: 15%;
-    background-color: red;
     float: right;
-    margin-top: -67.5px;
     margin-right: 20px;
     
 }
 
+.cajaMenu{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 2px solid red;
+    margin-top: -47.5px;
+    font-size: larger;
+}
+
+.cajaMenu:hover{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+
+/*PACIENTE EN ESPERA*/
 .pacientesEspera{
     border: 2px solid red;
     width: 76%;
-    height: 820px;
+    height: 780px;
     margin-top: 20px;
     overflow-y:scroll;
     padding: 10px;
@@ -56,10 +82,35 @@ li a{
 /*Citas*/
 .listaCitas{
     overflow-y:scroll;
-    height:820px;
+    height:780px;
     padding: 10px;
-    margin-top: -844px;
+    margin-top: -804px;
     float: right;
     border: 2px solid red;
     width: 20%;
+}
+
+.fecha{
+    width: 20%;
+    height: 50px;
+    margin-top: -70px;
+    margin-left: 25%;
+    font-size: larger;
+}
+
+
+.fecha p{
+    display: inline-block;
+}
+
+.hora{
+    width: 20%;
+    height: 80px;
+    margin-left: 55%;
+    font-size: 3em;
+    margin-top: -100px;
+}
+
+.hora p{
+    display: inline-block;
 }
