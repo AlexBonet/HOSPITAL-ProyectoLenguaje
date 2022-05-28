@@ -1,4 +1,4 @@
-import { saveVisita, onGetVisita,deleteVisita, getVisita, updateVisita } from '../js/firebase.js';
+import { saveVisita, onGetVisita,deleteVisita, getVisita, updateVisita } from '../firebase';
 
 const form = document.getElementById('log-form');
 const container = document.getElementById('cont-visitas');

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/trabajadores.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <title>AJUSTES DOCTORES</title>
+</head>
+<body>
+    <div class="main-content">
+        <div class="navPanel">
+            <div class="loguito">
+                <a href="./index.html"><img src="../i/loguito.png" alt="Loguito"></a>
+            </div>
+            <div class="menu">
+                <ul class="menul">
+                    <li><div class="cajaMenu"><a href="./miCuentaDr.html">Cuenta</a></div>
+                        <ul>
+                            <li><div class="cajaMenu log-out"><a href="../htmls/index.html">Cerrar Sesión</a></div></li>
+                        </ul>
+                    </li>
+                    <li><div class="cajaMenu"><a href="./visitasDr.html">Visitas</a></div></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="monitor">
+            <div class="reloj">
+                <div class="fecha">
+                    <p id="diaSemana" class="diaSemana"></p>
+                    <p id="dia" class="dia"></p>
+                    <p>de </p>
+                    <p id="mes" class="mes"></p>
+                    <p>de </p>
+                    <p id="year" class="year"></p>
+                </div>
+    
+                <div class="hora">
+                    <p id="horas" class="horas"></p>
+                    <p>:</p>
+                    <p id="minutos" class="minutos"></p>
+                    <p>:</p>
+                    <p id="segundos" class="segundos"></p>
+                </div>
+            </div>
+
+            <div class="listaEspera">
+                <h2>LISTA DE ESPERA</h2>
+                <div id="contenedor-citas">
+    
+                </div>
+            </div>
+
+            <div class="consultas">
+                <h2>CONSULTAS</h2>
+                <div id="contenedor-consultas">
+
+                </div>
+            </div>
+
+        </div>   
+    </div>
+    
+</body>
+<script type="module" src="../js/jsDr/listasMonitor.js"></script>
+<script src="../js/reloj.js"></script>
+
+</html>

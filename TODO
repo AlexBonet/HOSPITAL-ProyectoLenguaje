@@ -27,8 +27,13 @@ Atres coses:
     -: monitor en lista espera, y reloj :DONE:
 - @doctor termina la tarea y la marca como terminada
 
+
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 PRIORITI LIST
-
+1º INDEX DOCTOR : vore llistes
+2º Visita: que funcione, el CRUD sanser
+3º Marcar como terminada la cita/consulta/visita
+4º Cambiar la contraseá : al donar el boto un mensage de se ha enviado correo para cambiar la contraseña
 
 
