@@ -16,6 +16,7 @@ const firebaseConfig = {
     appId: "1:1009871135607:web:506cb01da5221884513772"
 };
 
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
@@ -54,9 +55,27 @@ export const getUser = ()  =>
             console.log('auth: usuario logueado ' + user.email)//esto pilla el user
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/firebase.User
-            const uid = user.uid;            
+            const uid = user.uid;   
+            //$.jGrowl("Usuario logueado: " + user.email, {theme: 'changeCount'});
             loginCheck(user)    
-            //window.location.href="../htmlPaciente/index.html";
+            window.location.href="../htmlPaciente/index.html";
+        
+        } else {
+        // User is signed out
+            loginCheck(user)    
+            console.log('auth: no hay usuario logueado')
+        
+        }
+    }); 
+
+    export const getUser2 = ()  =>
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            console.log('auth: usuario logueado ' + user.email)//esto pilla el user
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+            const uid = user.uid;   
+            loginCheck(user)    
         
         } else {
         // User is signed out
@@ -86,6 +105,7 @@ export const obtenerCorreos = ()  =>
 onAuthStateChanged(auth, (user) => {
     if (user) {
         console.log('auth: usuario logueado ' + user.email)
+        $.jGrowl("Usuario logueado: " + user.email, {theme: 'changeCount'});
         const uid = user.uid;            
     
     } else {

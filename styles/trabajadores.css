@@ -227,3 +227,9 @@ a{
     background-color: rgb(58, 197, 181);
     color: white;
 }
+
+.jGrowl .changeCount {
+    background-color: #337ab7;
+    font-size: large;
+
+}

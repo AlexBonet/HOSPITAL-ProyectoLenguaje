@@ -186,3 +186,9 @@ a:hover {
     border: 2px solid red;
 
 }
+
+.jGrowl .changeCount {
+    background-color: #337ab7;
+    font-size: large;
+    
+}

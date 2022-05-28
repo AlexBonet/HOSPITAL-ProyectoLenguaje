@@ -489,3 +489,8 @@ a:hover {
     color: rgb(99, 71, 155);
 
 }
+
+.jGrowl .changeCount {
+    background-color: #337ab7;
+    font-size: large;
+}

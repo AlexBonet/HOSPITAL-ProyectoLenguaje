@@ -1,12 +1,6 @@
-import {salir,loginCheck } from './firebase.js';
+import {salir,loginCheck, getUser2} from './firebase.js';
 
-const logout = document.getElementById('log-out')
-logout.addEventListener('click', (e) => {
-    e.preventDefault()
-    salir();
-
-})
-
+getUser2();
 
 window.onload = function () {
 console.log("usuario? " + loginCheck());

@@ -12,6 +12,6 @@ form.addEventListener('submit', (e) => {
     const hor = form['hor-c'];
 
     saveCitaGest(nom.value , esp.value , dcr.value , fec.value , hor.value );
-    
+    $.jGrowl("Cita registrada con existo", {theme: 'changeCount'});
     form.reset()
 })

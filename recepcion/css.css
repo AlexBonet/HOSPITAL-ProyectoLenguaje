@@ -114,3 +114,9 @@ li a{
 .hora p{
     display: inline-block;
 }
+
+.jGrowl .changeCount {
+    background-color: #337ab7;
+    font-size: large;
+
+}

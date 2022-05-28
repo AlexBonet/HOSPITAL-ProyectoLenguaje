@@ -8,8 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    
-    <title>index</title>
+    <!--jGrowl-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jquery-jgrowl/1.4.1/jquery.jgrowl.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-jgrowl/1.4.1/jquery.jgrowl.min.js"></script>
+
+    <title>PEDIR CITA - HOSPITAL</title>
 </head>
 <body>
     <div class="mainConteiner">
@@ -55,17 +59,36 @@
                     <label for="nombre">Nombre: </label>
                     <input type="text" placeholder="Inserte su nombre" id="nom-c" maxlength="25">
                     <br><br>
-                    <label for="apellidos">Doctor: </label>
-                    <input type="text" placeholder="Inserte nomnbre del Doctor" id="dcr-c" maxlength="25">
+                    <label for="doc">Doctor: </label>
+                            <select name="dcr-c" id="dcr-c" onchange="cambio_dr();">
+                                <option value="-" id="gdr">-</option>
+                                <option value="Oftalmología">Ana Vazquez</option>
+                                <option value="Pediatría">MARIA CARMEN López</option>
+                                <option value="Alergología">MANUEL GONZALEZ</option>
+                                <option value="Dermatología">Pilar Perez</option>
+                                <option value="Medicina Intensiva">Antonio Garcia</option>
+                                <option value="Otorrinolaringología">Jose Jose</option>
+                                <option value="Ginecología">Fernando Costa</option>
+                            </select>
                     <br><br>
-                    <label for="dni">Especialidad: </label>
-                    <input type="text" placeholder="Inserte la Especialidad" id="esp-c" maxlength="25">
+                    <label for="espe">Especialidad: </label>
+                    <select name="esp-c" id="esp-c" onchange="cambio_esp()" >
+                        <option value="-" id="ges">-</option>
+                        <option value="Ana Vazquez">Oftalmología</option>
+                        <option value="MARIA CARMEN López">Pediatría</option>
+                        <option value="MANUEL GONZALEZ">Alergología</option>
+                        <option value="Pilar Perez">Dermatología</option>
+                        <option value="Antonio Garcia">Medicina Intensiva</option>
+                        <option value="Jose Jose">Otorrinolaringología</option>
+                        <option value="Fernando Costa">Ginecología</option>
+
+                    </select>
                     <br><br>
                     <label for="fecha-hora">Dia de la cita:</label>
-                    <input type="date" id="fec-c" maxlength="25">
+                    <input type="date" id="fec-c" maxlength="25"  min="2022-06-01" max="2022-12-20">
                     <br><br>
                     <label for="fecha-hora">Hora de la cita:</label>
-                    <input type="time" id="hor-c" maxlength="25">
+                    <input type="time" id="hor-c" maxlength="25" value="10:00" max="18:00" min="10:00">
                     <br><br>
                     <button id="btn-pc">Pedir Cita</button>
                 </form>
@@ -98,5 +121,30 @@
     
 </body>
 <script src="https://kit.fontawesome.com/9fbcafb666.js" crossorigin="anonymous"></script>
-<script type="module" src="../js/jsPacientes/crearCita.js"></script>    
+<script type="module" src="../js/jsPacientes/crearCita.js"></script>  
+<!--SCRIP PARA LOS SELECT-->
+<script>
+
+    const dcrC = document.getElementById('dcr-c');//caja de doctores
+    const espC = document.getElementById('esp-c');//caja de especialidades
+    const guionDr = document.getElementById('gdr') //guion doctores
+    const guionEs = document.getElementById('ges') //guion especialidades
+
+    function cambio_dr(){
+        let dr = dcrC.value //valor de la caja de doctores
+
+        guionEs.innerHTML= dr;
+        
+        console.log(dr)
+    }
+
+    function cambio_esp(){
+        let esp = espC.value //valor de la caja de especialidades
+
+        guionDr.innerHTML= esp;
+
+        console.log(esp)
+    }
+    
+</script>
 </html>

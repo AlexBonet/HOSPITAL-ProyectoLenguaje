@@ -8,6 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!--jGrowl-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jquery-jgrowl/1.4.1/jquery.jgrowl.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-jgrowl/1.4.1/jquery.jgrowl.min.js"></script>
     
     <title>GESTIONAR CITAS</title>
 </head>
@@ -43,28 +48,30 @@
                     <div class="grupos">
                         <div class="grupo3">
                             <label for="nom">Especialidad: </label>
-                            <select name="esp-c" id="esp-c">
-                                <option value="Oftalmología">Oftalmología</option>
-                                <option value="Pediatría">Pediatría</option>
-                                <option value="Alergología">Alergología</option>
-                                <option value="Dermatología">Dermatología</option>
-                                <option value="Medicina Intensiva">Medicina Intensiva</option>
-                                <option value="Otorrinolaringología">Otorrinolaringología</option>
-                                <option value="Ginecología">Ginecología</option>
+                            <select name="esp-c" id="esp-c" onchange="cambio_esp()" >
+                                <option value="-" id="ges">-</option>
+                                <option value="Ana Vazquez">Oftalmología</option>
+                                <option value="MARIA CARMEN López">Pediatría</option>
+                                <option value="MANUEL GONZALEZ">Alergología</option>
+                                <option value="Pilar Perez">Dermatología</option>
+                                <option value="Antonio Garcia">Medicina Intensiva</option>
+                                <option value="Jose Jose">Otorrinolaringología</option>
+                                <option value="Fernando Costa">Ginecología</option>
 
                             </select>
                             <!--input type="text" placeholder="Especialidad" id="esp-c"-->
                         </div>
                         <div class="grupo1">
                             <label for="nom">Doctor: </label>
-                            <select name="dcr-c" id="dcr-c">
-                                <option value="Ana Vazquez">Ana Vazquez</option>
-                                <option value="MARIA CARMEN López">MARIA CARMEN López</option>
-                                <option value="MANUEL GONZALEZ">MANUEL GONZALEZ</option>
-                                <option value="Pilar Perez">Pilar Perez</option>
-                                <option value="Antonio Garcia">Antonio Garcia</option>
-                                <option value="Jose Jose">Jose Jose</option>
-                                <option value="Fernando Costa">Fernando Costa</option>
+                            <select name="dcr-c" id="dcr-c" onchange="cambio_dr();">
+                                <option value="-" id="gdr">-</option>
+                                <option value="Oftalmología">Ana Vazquez</option>
+                                <option value="Pediatría">MARIA CARMEN López</option>
+                                <option value="Alergología">MANUEL GONZALEZ</option>
+                                <option value="Dermatología">Pilar Perez</option>
+                                <option value="Medicina Intensiva">Antonio Garcia</option>
+                                <option value="Otorrinolaringología">Jose Jose</option>
+                                <option value="Ginecología">Fernando Costa</option>
                             </select>
                             <!--input type="text" placeholder="Doctor" id="dcr-c"-->
                         </div>
@@ -72,7 +79,7 @@
                     <div class="grupos">
                         <div class="grupo1">
                             <label for="fecha">Dia de la cita:</label>
-                            <input type="date" id="fec-c"  min="2022-05-26" max="2022-12-20">
+                            <input type="date" id="fec-c"  min="2022-06-01" max="2022-12-20">
                         </div>
                         <div class="grupo1">
                             <label for="hora">Hora de la cita:</label>
@@ -94,4 +101,29 @@
 </body>
 <script src="https://kit.fontawesome.com/9fbcafb666.js" crossorigin="anonymous"></script>
 <script type="module" src="../js/jsAdmin/gestorCitas.js"></script>
+<!--SCRIP PARA LOS SELECT-->
+<script>
+
+    const dcrC = document.getElementById('dcr-c');//caja de doctores
+    const espC = document.getElementById('esp-c');//caja de especialidades
+    const guionDr = document.getElementById('gdr') //guion doctores
+    const guionEs = document.getElementById('ges') //guion especialidades
+
+    function cambio_dr(){
+        let dr = dcrC.value //valor de la caja de doctores
+
+        guionEs.innerHTML= dr;
+        
+        console.log(dr)
+    }
+
+    function cambio_esp(){
+        let esp = espC.value //valor de la caja de especialidades
+
+        guionDr.innerHTML= esp;
+
+        console.log(esp)
+    }
+    
+</script>
 </html>

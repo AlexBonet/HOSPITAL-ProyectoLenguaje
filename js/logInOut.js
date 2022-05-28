@@ -7,7 +7,7 @@ form.addEventListener('submit', (e) => {
 
     const mail = form['form-mail']
     const pswd = form['form-passwd']
-
+    
     loguear(mail.value, pswd.value);
 
     form.reset();
