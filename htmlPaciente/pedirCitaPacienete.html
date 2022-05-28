@@ -60,29 +60,29 @@
                     <input type="text" placeholder="Inserte su nombre" id="nom-c" maxlength="25">
                     <br><br>
                     <label for="doc">Doctor: </label>
-                            <select name="dcr-c" id="dcr-c" onchange="cambio_dr();">
-                                <option value="-" id="gdr">-</option>
-                                <option value="Oftalmología">Ana Vazquez</option>
-                                <option value="Pediatría">MARIA CARMEN López</option>
-                                <option value="Alergología">MANUEL GONZALEZ</option>
-                                <option value="Dermatología">Pilar Perez</option>
-                                <option value="Medicina Intensiva">Antonio Garcia</option>
-                                <option value="Otorrinolaringología">Jose Jose</option>
-                                <option value="Ginecología">Fernando Costa</option>
-                            </select>
+                                <select name="dcr-c" id="dcr-c" onchange="cambio_dr();">
+                                    <option value="-" id="gdr">Elegir Doctor</option>
+                                    <option value="Ana Vazquez">Ana Vazquez</option>
+                                    <option value="MARIA CARMEN López">MARIA CARMEN López</option>
+                                    <option value="MANUEL GONZALEZ">MANUEL GONZALEZ</option>
+                                    <option value="Pilar Perez">Pilar Perez</option>
+                                    <option value="Antonio Garcia">Antonio Garcia</option>
+                                    <option value="Jose Jose">Jose Jose</option>
+                                    <option value="Fernando Costa">Fernando Costa</option>
+                                </select>
                     <br><br>
                     <label for="espe">Especialidad: </label>
                     <select name="esp-c" id="esp-c" onchange="cambio_esp()" >
-                        <option value="-" id="ges">-</option>
-                        <option value="Ana Vazquez">Oftalmología</option>
-                        <option value="MARIA CARMEN López">Pediatría</option>
-                        <option value="MANUEL GONZALEZ">Alergología</option>
-                        <option value="Pilar Perez">Dermatología</option>
-                        <option value="Antonio Garcia">Medicina Intensiva</option>
-                        <option value="Jose Jose">Otorrinolaringología</option>
-                        <option value="Fernando Costa">Ginecología</option>
-
+                        <option value="-" id="ges">Elegir Especialidad</option>
+                        <option value="Oftalmología">Oftalmología</option>
+                        <option value="Pediatría">Pediatría</option>
+                        <option value="Alergología">Alergología</option>
+                        <option value="Dermatología">Dermatología</option>
+                        <option value="Medicina Intensiva">Medicina Intensiva</option>
+                        <option value="Otorrinolaringología">Otorrinolaringología</option>
+                        <option value="Ginecología">Ginecología</option>
                     </select>
+
                     <br><br>
                     <label for="fecha-hora">Dia de la cita:</label>
                     <input type="date" id="fec-c" maxlength="25"  min="2022-06-01" max="2022-12-20">
@@ -132,18 +132,66 @@
 
     function cambio_dr(){
         let dr = dcrC.value //valor de la caja de doctores
-
-        guionEs.innerHTML= dr;
         
-        console.log(dr)
+        //console.log(dr)
+        if(dr=='Ana Vazquez'){
+            espC.innerHTML=`<option value="Oftalmología">Oftalmología</option>`
+        }else if(dr=='MARIA CARMEN López'){
+            espC.innerHTML=`<option value="Pediatría">Pediatría</option>`
+        }else if(dr=='MANUEL GONZALEZ'){
+            espC.innerHTML=`<option value="Alergología">Alergología</option>`
+        }else if(dr=='Pilar Perez'){
+            espC.innerHTML=`<option value="Dermatología">Dermatología</option>`
+        }else if(dr=='Antonio Garcia'){
+            espC.innerHTML=`<option value="Medicina Intensiva">Medicina Intensiva</option>`
+        }else if(dr=='Jose Jose'){
+            espC.innerHTML=`<option value="Otorrinolaringología">Otorrinolaringología</option>`
+        }else if(dr=='Fernando Costa'){
+            espC.innerHTML=`<option value="Ginecología">Ginecología</option>`
+        }else {
+            espC.innerHTML=`<option value="-" id="ges">Elegir Especialidad</option>
+                            <option value="Oftalmología">Oftalmología</option>
+                            <option value="Pediatría">Pediatría</option>
+                            <option value="Alergología">Alergología</option>
+                            <option value="Dermatología">Dermatología</option>
+                            <option value="Medicina Intensiva">Medicina Intensiva</option>
+                            <option value="Otorrinolaringología">Otorrinolaringología</option>
+                            <option value="Ginecología">Ginecología</option>
+                            `
+        }
+
+
     }
 
     function cambio_esp(){
         let esp = espC.value //valor de la caja de especialidades
 
-        guionDr.innerHTML= esp;
-
-        console.log(esp)
+        //console.log(esp)
+        if(esp=='Oftalmología'){
+            dcrC.innerHTML=`<option value="Ana Vazquez">Ana Vazquez</option>`
+        }else if(esp=='Pediatría'){
+            dcrC.innerHTML=`<option value="MARIA CARMEN López">MARIA CARMEN López</option>`
+        }else if(esp=='Alergología'){
+            dcrC.innerHTML=`<option value="MANUEL GONZALEZ">MANUEL GONZALEZ</option>`
+        }else if(esp=='Dermatología'){
+            dcrC.innerHTML=`<option value="Pilar Perez">Pilar Perez</option>`
+        }else if(esp=='Medicina Intensiva'){
+            dcrC.innerHTML=`<option value="Antonio Garcia">Antonio Garcia</option>`
+        }else if(esp=='Otorrinolaringología'){
+            dcrC.innerHTML=`<option value="Jose Jose">Jose Jose</option>`
+        }else if(esp=='Ginecología'){
+            dcrC.innerHTML=`<option value="Fernando Costa">Fernando Costa</option>`
+        }else {
+            dcrC.innerHTML=`<option value="-" id="gdr">Elegir Doctor</option>
+                            <option value="Ana Vazquez">Ana Vazquez</option>
+                            <option value="MARIA CARMEN López">MARIA CARMEN López</option>
+                            <option value="MANUEL GONZALEZ">MANUEL GONZALEZ</option>
+                            <option value="Pilar Perez">Pilar Perez</option>
+                            <option value="Antonio Garcia">Antonio Garcia</option>
+                            <option value="Jose Jose">Jose Jose</option>
+                            <option value="Fernando Costa">Fernando Costa</option>
+                            `
+        }
     }
     
 </script>
