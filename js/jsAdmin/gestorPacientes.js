@@ -23,14 +23,16 @@ form.addEventListener('submit', (e) => {
     if(!editStatus){
         logPaciente(nom.value,apel.value,dire.value,pobl.value,pais.value,mail.value,tlf.value,user.value,passwd.value,confpass.value)
         autentifiacar(mail.value, passwd.value);
+        $.jGrowl("Paciente creado con existo", {theme: 'changeCount'});
 
     }else{
         updatePacientes(id,{nom:nom.value,apel:apel.value,dire:dire.value,pobl:pobl.value,pais:pais.value,mail:mail.value,tlf:tlf.value,user:user.value,passwd:passwd.value,confpass:confpass.value});
         editStatus = false;
+        $.jGrowl("Paciente actualizado con existo", {theme: 'changeCount'});
     }
 
     form.reset();
-    form['btn-register'].innerText = 'Crear Paciente';
+    form['btn-register'].innerText = 'CREAR PACIENTE';
 })
 
 window.addEventListener('DOMContentLoaded', async () => {
@@ -103,6 +105,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     btnsDelete.forEach(btn => {
         btn.addEventListener('click',({target: {dataset}}) => {
             deletePacientes(dataset.id)
+            $.jGrowl("Paciente eliminado con existo", {theme: 'changeCount'});
         })
     })
 
@@ -126,7 +129,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             editStatus = true;
             id = doc.id;
 
-            form['btn-register'].innerText = 'Actualizar';
+            form['btn-register'].innerText = 'ACTUALIZAR PACIENTE';
         })
     })
 

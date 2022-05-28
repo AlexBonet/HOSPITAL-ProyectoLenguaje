@@ -21,10 +21,12 @@ form.addEventListener('submit', (e) => {
     if(!editStatus){
         logDoctor(nom.value,apel.value, dire.value, pobl.value,pais.value,mail.value,tlf.value,user.value,"123456","123456");
         autentifiacar(mail.value, "123456");
+        $.jGrowl("Doctore creade con existe", {theme: 'changeCount'});
 
     }else{
         updateDoctor(id,{nom:nom.value,apel:apel.value, dire:dire.value, pobl:pobl.value, pais:pais.value,mail:mail.value,tlf:tlf.value,user:user.value});
         editStatus = false;
+        $.jGrowl("Doctore actualizade con existe", {theme: 'changeCount'});
     }
 
     form.reset();
@@ -101,6 +103,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     btnsDelete.forEach(btn => {
         btn.addEventListener('click',({target: {dataset}}) => {
             deleteDoctor(dataset.id)
+            $.jGrowl("Doctore eliminade con existe", {theme: 'changeCount'});
         })
     })
 
@@ -109,6 +112,8 @@ window.addEventListener('DOMContentLoaded', async () => {
         btn.addEventListener('click',async ({target: {dataset}}) => {
             const doc = await getDoctor(dataset.id);
             const task = doc.data();
+
+            
 
             form['form-nom'].value = task.nom;
             form['form-apel'].value = task.apel;

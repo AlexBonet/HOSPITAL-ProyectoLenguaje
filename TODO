@@ -13,31 +13,22 @@ Parte recepcion (recepcion)
 ??que fa un recepcionista
 
 Atres coses:
--: Comprobar contraseñes :MI RESULTADO: no comprobem les contraseñes per anar més rapid
-- enviar correu de confimacion al paciente
+    -: Comprobar contraseñes :MI RESULTADO: no comprobem les contraseñes per anar més rapid
+    -: enviar correu de confimacion al paciente :crec que esta fet:
 - @doctor cambiar de contraseña
--: @trabajadores generar contraseña  8 dígitos al menos una mayúscula / minúscula / número / símbolo :MI RESULTADO: SE LE ASIGNA contraseña 123456
--: asignar consultas automaticamente y controlar que no haya conflictos entre doctores y despachos :IMPOSIBLE:
--: @paciente podra buscar por especialidad y doctors en #pedirCita :DONE:
--: @paciente seleccionará hora disponible en #pedirCita :DONE:
-- enviar correu en datos de reserva a @paciente 
--: avisar al paciente antes para recordarle la cita :RESULTADO: no se pot
+    -: @trabajadores generar contraseña  8 dígitos al menos una mayúscula / minúscula / número / símbolo :MI RESULTADO: SE LE ASIGNA contraseña 123456
+    -: asignar consultas automaticamente y controlar que no haya conflictos entre doctores y despachos :IMPOSIBLE:
+    -: @paciente podra buscar por especialidad y doctors en #pedirCita :DONE:
+    -: @paciente seleccionará hora disponible en #pedirCita :DONE:
+    -: enviar correu en datos de reserva a @paciente :anem a pasar:
+    -: avisar al paciente antes para recordarle la cita :RESULTADO: no se pot
 - @doctor te listado en consultas del dia
 - @doctor te pantalla anota cada visita
-- monitor en lista espera, y reloj
+    -: monitor en lista espera, y reloj :DONE:
 - @doctor termina la tarea y la marca como terminada
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 PRIORITI LIST
-1º   posar en casi tots  <!--jGrowl--> /htmls: identificarse, registrarse  /htmlsPaciente: pedirCita, index  /htmlsAdmin: tots , doc y recep en tots
-2º 
-3º Enviar Correo de verificacion y de reserva
-4º
-5º Botons de cerrar sesion y separar de login
 
-
-buscar un current date pa pasar al html
-
-el crear visitas no va
 
 

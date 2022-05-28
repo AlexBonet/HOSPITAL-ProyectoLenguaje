@@ -20,5 +20,6 @@ form.addEventListener('submit', (e) => {
     autentifiacar(mail.value, pswd.value);
 
     form.reset();
+    $.jGrowl("Usuario registrado con existo", {theme: 'changeCount', life: 20000 });
     window.location.href="./identificarse.html";
 })

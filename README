@@ -1,0 +1,15 @@
+COSES QUE DIR DEL PROYECTE:
+    temin una estetica diferent a tots
+    COM A ADMIN
+        que podem consultar, crear, actualizar, eliminar 
+        tenim mensatjes que confirmen el CRUD
+        pot fer login desde cualsebol lloc
+        te la posiblitat de accedir als doctors y recepcionistes per si pasa algun proble
+    
+    COM A RES
+        ESTA EL MONITOR EN LA HORA CONSULTAS Y LISTA DE ESPERA
+        pot registrarse com a cliente
+        te accese a identificarse com a paciente
+        te accese al navbar en general
+        
+

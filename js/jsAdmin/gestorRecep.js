@@ -21,10 +21,12 @@ form.addEventListener('submit', (e) => {
     if(!editStatus){
         logRecep(nom.value,apel.value,dire.value,pobl.value,pais.value,mail.value,tlf.value,user.value,"123456","123456");
         autentifiacar(mail.value, "123456");
+        $.jGrowl("Recepcionista creado con existo", {theme: 'changeCount'});
 
     }else{
         updateRecep(id,{nom:nom.value,apel:apel.value,dire:dire.value,pobl:pobl.value,pais:pais.value,mail:mail.value,tlf:tlf.value,user:user.value});
         editStatus = false;
+        $.jGrowl("Recepcionista actualizado con existo", {theme: 'changeCount'});
     }
 
     form.reset();
@@ -101,6 +103,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     btnsDelete.forEach(btn => {
         btn.addEventListener('click',({target: {dataset}}) => {
             deleteRecep(dataset.id)
+            $.jGrowl("Recepcionista eliminado con existo", {theme: 'changeCount'});
         })
     })
 
@@ -122,7 +125,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             editStatus = true;
             id = doc.id;
 
-            form['btn-register'].innerText = 'Actualizar';
+            form['btn-register'].innerText = 'ACTUALIZAR RECEPCIONISTA';
         })
     })
 

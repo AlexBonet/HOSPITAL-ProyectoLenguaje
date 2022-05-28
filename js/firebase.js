@@ -3,7 +3,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.0/firebase
 import { getFirestore, collection, addDoc, getDocs, onSnapshot, deleteDoc, doc, getDoc, updateDoc,
         query, where
         } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-firestore.js"
-import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged 
+import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged , sendSignInLinkToEmail 
         } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-auth.js"
 
 // Your web app's Firebase configuration
@@ -29,7 +29,14 @@ export const autentifiacar  = (mail, pswd) =>
         .then((userCredential) => {
         // Signed in
         console.log('usuario registrado')
-        //const user = userCredential.user;
+        sendSignInLinkToEmail(auth, mail, actionCodeSettings)
+            .then(() => {
+                window.localStorage.setItem('emailForSignIn', mail);
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+            });
         });
 
 export const loguear  = (mail,pswd)  =>
@@ -55,11 +62,14 @@ export const getUser = ()  =>
             console.log('auth: usuario logueado ' + user.email)//esto pilla el user
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/firebase.User
-            const uid = user.uid;   
-            //$.jGrowl("Usuario logueado: " + user.email, {theme: 'changeCount'});
-            loginCheck(user)    
-            window.location.href="../htmlPaciente/index.html";
-        
+            if(user.email == 'admin@admin.admin'){
+                window.location.href="../htmlsAdmin/index.html";
+            }else{
+                const uid = user.uid;   
+                $.jGrowl("Usuario logueado: " + user.email, {theme: 'changeCount'});
+                loginCheck(user)    
+                window.location.href="../htmlPaciente/index.html";
+            }
         } else {
         // User is signed out
             loginCheck(user)    
@@ -202,21 +212,3 @@ export const onGetVisita = (callback) => onSnapshot(collection(db, 'visita'),cal
 export const getVisita = id => getDoc(doc(db,'visita', id));
 
 export const deleteVisita = id => deleteDoc(doc(db,'visita', id));
-
-/*QUERY*/
-/*
-q = query(collection(db, tabl), orderBy("id", "desc"), limit(1) );
-
-export const getWithQ = (callback) => {
-    onSnapshot(q, callback);
-}
-
-getWithQ((snapshot) => {
-    snapshot.docs.forEach((doc) => {
-      usu = doc.data();
-    })
-})
-
-getNombreDoctores = (callback) => {
-    onSnapshot(query(collection(db,'doctores')), callback);
-}*/

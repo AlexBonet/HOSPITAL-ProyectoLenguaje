@@ -58,6 +58,11 @@ const loguear  = (mail,pswd, nuum)  =>
         .then((userCredential) => {
         // Signed in
         console.log('usuario logueado')
+
+        if(nuum==1){
+            if(mail.value != 'admin@admin.admin')
+            $.jGrowl("NO ES UN ADMINISTRADOR", {theme: 'changeCount'});
+        }
         
         const usua = getDarkUser(nuum);
         console.log('usuario: ' + usua)
@@ -70,7 +75,12 @@ const loguear  = (mail,pswd, nuum)  =>
             const uid = user.uid;   
                 
             if(nuum==1){
-                    window.location.href="../htmlsAdmin/index.html";
+                    if(user.email == 'admin@admin.admin'){
+                        window.location.href="../htmlsAdmin/index.html";
+                    }else{
+                        $.jGrowl("NO ES UN ADMINISTRADOR", {theme: 'changeCount'});
+                    }
+                    
                     console.log("usuario? " + user.email);
 
 

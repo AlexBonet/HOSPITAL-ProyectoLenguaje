@@ -14,9 +14,11 @@ form.addEventListener('submit', (e) => {
     
     if(!editStatus){
         saveEspecialidad(especia ,dr);
+        $.jGrowl("Especialidad creada con existo", {theme: 'changeCount'});
         console.log("save")    
     }else{
         updateEspecialidad(id,{especia ,dr});
+        $.jGrowl("Especialidad actualizada con existo", {theme: 'changeCount'});
         editStatus = false;
     }
     console.log("click")
@@ -88,6 +90,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     btnsDelete.forEach(btn => {
         btn.addEventListener('click',({target: {dataset}}) => {
             deleteEspecialidad(dataset.id)
+            $.jGrowl("Especialidad eliminada con existo", {theme: 'changeCount'});
         })
     })
 

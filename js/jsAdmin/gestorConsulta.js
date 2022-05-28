@@ -14,9 +14,11 @@ form.addEventListener('submit', (e) => {
     
     if(!editStatus){
         saveConsulta(num ,dr);
+        $.jGrowl("Consulta creada amb exit", {theme: 'changeCount'});
         console.log("save")    
     }else{
         updateConsulta(id,{num ,dr});
+        $.jGrowl("Consulta actualitzada amb exit", {theme: 'changeCount'});
         editStatus = false;
     }
     console.log("click")
@@ -84,6 +86,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     btnsDelete.forEach(btn => {
         btn.addEventListener('click',({target: {dataset}}) => {
             deleteConsulta(dataset.id)
+            $.jGrowl("Consulta eliminada amb exit", {theme: 'changeCount'});
         })
     })
 

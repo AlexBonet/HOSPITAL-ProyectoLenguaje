@@ -4,4 +4,5 @@ getUser2();
 
 window.onload = function () {
 console.log("usuario? " + loginCheck());
+    
 }
