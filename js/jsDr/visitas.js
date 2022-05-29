@@ -53,7 +53,7 @@ form.addEventListener('submit', (e) => {
     }
     console.log("click")
     form.reset()
-    form['log-form'].innerText = 'CREAR VISITA';
+    form['log-form'].innerText = 'GUARDAR VISITA';
 })
 
 /*Visitas anteriores:*/
@@ -63,43 +63,46 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     querySnapshot.forEach((docu) => {
         const task = docu.data();
-        html+=` 
-            <style>      
-                .visita{
-                    width: 95.5%;
-                    padding: 10px;
-                    border: 2px solid #c53a4a;
-                }
-                .cita-n{
-                    display: inline-block;
-                }
-                .fech-n{
-                    margin-left: 100px;
-                    display: inline-block;
-                }
-                .edit-n{
-                    display: inline-block;
-                    float: right;
-                    margin-right: 10px;
-                }
-                .info-n{
-                    margin-top: 10px;
-                    display: inline-block;
-                }
-                .dlte-n{
-                    display: inline-block;
-                    margin-top: 10px;
-                    float: right;
-                    margin-right: -65px;
-                }
-            </style>
+        html+=` <style>      
+                    .visita{
+                        width: 95.5%;
+                        padding: 10px;
+                        border: 2px solid #c53a4a;
+                    }
+                    .cita-n{
+                        width: 40%;
+                        display: inline-block;
+                    }
+                    .fech-n{
+                        width: 30%;
+                        margin-left: 50px;
+                        display: inline-block;
+                    }
+                    .edit-n{
+                        display: inline-block;
+                        float: right;
+                        margin-right: 10px;
+                    }
+                    
+                    .info-n{
+                        width: 80%;
+                        margin-top: 10px;
+                        display: inline-block;
+                    }
+                    .dlte-n{
+                        display: inline-block;
+                        margin-top: 10px;
+                        float: right;
+                        margin-right: -65px;
+                    }
+                </style>
 
             <div class="visita">
                 <div class="cita-n">${task.cita}</div>
                 <div class="fech-n">FECHA: <i>${task.fec}</i></div>
-                <div class="edit-n"><button class='btn-edit' data-id="${docu.id}>EDITAR</button></div>
+                <div class="edit-n"><button class='btn-edit' data-id="${docu.id}">EDITAR</button></div>
                 <div class="info-n">PACIENTE: <i>${task.nom} ${task.ape}</i></div>
-                <div class="dlte-n"><button class='btn-delete' data-id="${docu.id}}>BORRAR</button></div>
+                <div class="dlte-n"><button class='btn-delete' data-id="${docu.id}">BORRAR</button></div>
             </div>
         `;
     });
@@ -120,11 +123,11 @@ window.addEventListener('DOMContentLoaded', async () => {
             const docu = await getVisita(dataset.id)
             const task = docu.data()
 
-            form['nom-n'].value=task.nom;
-            form['ape-n'].value=task.nom;
-            form['cita-n'].value=task.nom;
-            form['fec-n'].value=task.nom;
-            form['nota'].value=task.nom;
+            form['nom-n'].value = task.nom;
+            form['ape-n'].value = task.ape;
+            form['cit-n'].value = task.cita;
+            form['fec-n'].value = task.fec;
+            form['txt-n'].value = task.nota;
 
             editStatus = true;
             id = docu.id;

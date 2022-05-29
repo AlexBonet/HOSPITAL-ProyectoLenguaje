@@ -155,41 +155,6 @@ a{
     border: 5px solid rgb(58, 197, 181);
 
 }
-/*
-.visita{
-    width: 95.5%;
-    padding: 10px;
-    border: 2px solid #c53a4a;
-    
-    
-}
-
-.cita-n{
-    display: inline-block;
-}
-
-.fech-n{
-    margin-left: 100px;
-    display: inline-block;
-}
-
-.edit-n{
-    display: inline-block;
-    float: right;
-    margin-right: 10px;
-}
-
-.info-n{
-    margin-top: 10px;
-    display: inline-block;
-}
-
-.dlte-n{
-    display: inline-block;
-    margin-top: 10px;
-    float: right;
-    margin-right: -65px;
-}*/
 
 /*Perfil del doctor*/
 .miCuentaContainer{
@@ -239,7 +204,7 @@ a{
 }
 
 .jGrowl .changeCount {
-    background-color: #337ab7;
+    background-color: rgb(58, 197, 181);
     font-size: large;
 
 }

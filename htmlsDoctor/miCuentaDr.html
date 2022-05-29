@@ -55,17 +55,12 @@
     const btn = document.getElementById('btn')
     const emial = form['emial'].value;
 
-    //const btn = document.getElementById('contrasenya');//al donar al boto se te que desplegar un form
-    //const mail = //fer un mini formilario pa posar la contraseña
-
     btn.addEventListener('submit',(e) => {
-            e.preventDefault()
+            e.preventDefault() //no funciona
             $.jGrowl("Correo enviado", {theme: 'changeCount'});
             console.log("submit");   
             cambiarPasswd(emial); 
-            console.log(emial);  
             form.reset;
-            
             
         })
     
