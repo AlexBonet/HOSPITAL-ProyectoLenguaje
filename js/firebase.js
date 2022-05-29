@@ -1,9 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-app.js";
 import { getFirestore, collection, addDoc, getDocs, onSnapshot, deleteDoc, doc, getDoc, updateDoc,
-        query, where
         } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-firestore.js"
-import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged , sendSignInLinkToEmail 
+import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged , sendSignInLinkToEmail,sendPasswordResetEmail 
         } from "https://www.gstatic.com/firebasejs/9.8.0/firebase-auth.js"
 
 // Your web app's Firebase configuration
@@ -125,6 +124,11 @@ onAuthStateChanged(auth, (user) => {
     }
 }); 
 
+export const cambiarPasswd = (email)=> {
+    sendPasswordResetEmail(email);
+    $.jGrowl("Correo enviado", {theme: 'changeCount'});
+}
+
 /*CITAS*/
 export const saveCitaGest = (nom,esp,dcr,fec,hor) => 
     addDoc(collection(db, 'citas'),{nom ,esp ,dcr ,fec,hor})
@@ -201,14 +205,59 @@ export const getConsulta = id => getDoc(doc(db,'consulta', id));
 
 export const deleteConsulta = id => deleteDoc(doc(db,'consulta', id));
 
-/*Vvisita*/
-export const saveVisita = (nom,ape,cita,fec,nota) => 
-    addDoc(collection(db, 'visita'),{nom,ape,cita,fec,nota})
+/*CONTRASEÑAS*/
+let simbolos = "$#_-.,'¿?!¡%&/()";
+let mayusculas = "ABCDEFGHIJKLMOPQRSTUVWXYZ";
+let minusculas = "abcdefghijklmnopqrsetuvwxyz";
+let numeros = "1234567890";
 
-export const updateVisita = (id,newFields) => updateDoc(doc(db,"visita",id), newFields);
+let random = simbolos+mayusculas+minusculas+numeros;
 
-export const onGetVisita = (callback) => onSnapshot(collection(db, 'visita'),callback);
+let haveMayus = false;
+let haveMinus = false;
+let havaNum = false;
+let haveSim = false;
 
-export const getVisita = id => getDoc(doc(db,'visita', id));
+let contrasenya = '';
+let i = 0;
 
-export const deleteVisita = id => deleteDoc(doc(db,'visita', id));
+let str = "";
+
+function passwordDoIt(){
+    do{
+        i = getRandomNum();
+        contrasenya = random.charAt(i);
+        if(simbolos.includes(contrasenya)){
+            haveSim = true;
+            i++;
+        }
+        if(mayusculas.includes(contrasenya)){
+            haveMayus = true;
+            i++;
+        }
+        if(minusculas.includes(contrasenya)){
+            haveMinus = true;
+            i++;
+        }
+        if(numeros.includes(contrasenya)){
+            havaNum = true;
+            i++;
+        }
+        str += contrasenya;
+        if(str.length > 9){
+            str ="";
+            contrasenya = '';
+            haveMayus = false;
+            haveMinus = false;
+            havaNum = false;
+            haveSim = false;
+        }
+    }while(str.length < 8 && (haveMayus = true) && (haveMinus = true) && (havaNum = true) && (haveSim = true));
+    console.log(str);
+    return str;
+}
+
+function getRandomNum(){
+    let u =Math.floor((Math.random()*(random.length-0+1)+0)) 
+    return u;
+}

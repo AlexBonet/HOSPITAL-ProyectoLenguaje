@@ -1,5 +1,10 @@
 COSES QUE DIR DEL PROYECTE:
     temin una estetica diferent a tots
+
+    Coses que no que no estan activaes:
+        generar contraseñas seguras
+        mig recepcionista
+
     COM A ADMIN
         que podem consultar, crear, actualizar, eliminar 
         tenim mensatjes que confirmen el CRUD

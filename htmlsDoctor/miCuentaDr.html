@@ -31,7 +31,16 @@
         </div>
 
         <div class="miCuentaContainer">
-            <a href=""><div class="btn-cerrarS"><p>CAMBIAR CONTRASEÑA</p></div></a>
+            <div class="btn-cerrarS" id="contrasenya"><p>CAMBIAR CONTRASEÑA</p></div>
+
+            <div class="form-cambio" id="form-cambio">
+                <form action="" id="form">
+                    <label for="" style="font-size:  x-large;">Inserte su correo: </label><br><br>
+                    <input type="email" placeholder="Email" size="30" id="emial" required>
+                    <button id="btn">Enviar</button>
+                </form>
+            </div>
+
             <a href="../htmls/index.html"><div class="btn-cerrarS"><p>CERRAR SESIÓN</p></div></a>                
         </div>
 
@@ -40,4 +49,26 @@
     </div>
     
 </body>
+<script type="module">
+    import{cambiarPasswd} from '../js/firebase.js';
+    const form = document.getElementById('form')
+    const btn = document.getElementById('btn')
+    const emial = form['emial'].value;
+
+    //const btn = document.getElementById('contrasenya');//al donar al boto se te que desplegar un form
+    //const mail = //fer un mini formilario pa posar la contraseña
+
+    btn.addEventListener('submit',(e) => {
+            e.preventDefault()
+            $.jGrowl("Correo enviado", {theme: 'changeCount'});
+            console.log("submit");   
+            cambiarPasswd(emial); 
+            console.log(emial);  
+            form.reset;
+            
+            
+        })
+    
+
+</script>
 </html>

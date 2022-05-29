@@ -83,7 +83,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                 <div class="doc"><h3>Dr/a.: <i>${task.dcr}</i></h3></div>
                 <div class="esp"><p><i>${task.esp}</i></p></div>
                 <div class="fyh"><h3>Fecha y Hora: <i> ${task.fec} , ${task.hor}</i></h3></div>    
-                <div class="btn-editar"><button class='btn-edit' href="#cita-form data-id="${docu.id}">Editar</button></div>
+                <div class="btn-editar"><s">Editar</button></div>
                 <div class="btn-dlt"><button class='btn-delete' data-id="${docu.id}">Borrar</button></div>
             </div>
             
@@ -93,7 +93,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     container.innerHTML = html ;
 
-    const btnsDelete = container.querySelectorAll('.btn-delete')
+    const btnsDelete = container.querySelectorAll('.btn-delete');
     btnsDelete.forEach(btn => {
         btn.addEventListener('click',({target: {dataset}}) => {
             deleteTask(dataset.id)

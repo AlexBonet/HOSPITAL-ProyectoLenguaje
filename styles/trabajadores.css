@@ -155,7 +155,7 @@ a{
     border: 5px solid rgb(58, 197, 181);
 
 }
-
+/*
 .visita{
     width: 95.5%;
     padding: 10px;
@@ -189,7 +189,7 @@ a{
     margin-top: 10px;
     float: right;
     margin-right: -65px;
-}
+}*/
 
 /*Perfil del doctor*/
 .miCuentaContainer{
@@ -220,6 +220,16 @@ a{
     text-align: center;
     font-size: x-large;
     border: 3px solid rgb(58, 197, 181);
+}
+
+.form-cambio{
+    border: 3px solid rgb(58, 197, 181);
+    padding: 10px;
+    margin-top: -80px;
+    margin-bottom: 80px;
+    width: 30%;
+    margin-left: 35%;
+    height: 80px;
 }
 
 .btn-cerrarS:hover{
